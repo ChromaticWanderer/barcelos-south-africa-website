@@ -1,0 +1,392 @@
+{
+  "available": {
+    "logos": [
+      {
+        "path": "/docs/brand-assets/Barcelos Assets/Barcelos Logo.png",
+        "description": "Primary Barcelos logo with rooster and 'Flame Grilled Chicken' tagline",
+        "usage": "Main header, footer, marketing materials",
+        "format": "PNG",
+        "variants": [
+          "Green lockup",
+          "White lockup"
+        ]
+      },
+      {
+        "path": "/docs/brand-assets/Barcelos Assets/Shield Logo.svg",
+        "description": "Barcelos shield icon logo",
+        "usage": "Favicon, app icon, social media profile",
+        "format": "SVG"
+      },
+      {
+        "path": "/docs/brand-assets/Barcelos Assets/BarcelosShield.png",
+        "description": "Barcelos shield standalone",
+        "usage": "Brand marks, watermarks",
+        "format": "PNG"
+      }
+    ],
+    "brand_elements": [
+      {
+        "path": "/docs/brand-assets/Barcelos Assets/Pattern.png",
+        "description": "Portuguese tile pattern (red decorative background)",
+        "usage": "Section backgrounds, decorative elements",
+        "format": "PNG"
+      },
+      {
+        "path": "/docs/brand-assets/Barcelos Assets/Heart.png",
+        "description": "Heart icon for values/family messaging",
+        "usage": "Values section icons",
+        "format": "PNG"
+      },
+      {
+        "path": "/docs/brand-assets/Barcelos Assets/Barcelos Heart Mosaic.png",
+        "description": "Heart with mosaic pattern",
+        "usage": "Decorative elements, emotional messaging",
+        "format": "PNG"
+      },
+      {
+        "path": "/docs/brand-assets/Barcelos Assets/Share Delicious.png",
+        "description": "'Share Delicious' brand tagline graphic",
+        "usage": "Marketing campaigns, social sharing prompts",
+        "format": "PNG"
+      }
+    ],
+    "backgrounds": [
+      {
+        "path": "/docs/brand-assets/Barcelos Assets/Red background.png",
+        "description": "Brand red with pattern overlay",
+        "usage": "Hero sections, full-bleed backgrounds",
+        "format": "PNG"
+      },
+      {
+        "path": "/docs/brand-assets/Barcelos Assets/Yellow background.png",
+        "description": "Brand yellow background",
+        "usage": "Accent sections, CTAs",
+        "format": "PNG"
+      },
+      {
+        "path": "/docs/brand-assets/Barcelos Assets/Green background.png",
+        "description": "Brand green background",
+        "usage": "Alternative sections, sustainability content",
+        "format": "PNG"
+      },
+      {
+        "path": "/docs/brand-assets/Barcelos Assets/White background.png",
+        "description": "Clean white background",
+        "usage": "Content sections, product showcases",
+        "format": "PNG"
+      }
+    ],
+    "brand_colors": [
+      {
+        "path": "/docs/brand-assets/Barcelos Assets/Barcelos Colours.png",
+        "description": "Official brand colour palette reference",
+        "usage": "Design system reference",
+        "format": "PNG",
+        "note": "Use for extracting exact colour codes"
+      }
+    ],
+    "product_images": [
+      {
+        "path": "/docs/brand-assets/Barcelos Assets/Quarter Chicken + Chips - Digital.jpg",
+        "description": "Quarter chicken with chips - angled view",
+        "usage": "Menu page, featured items, promotions",
+        "format": "JPG",
+        "dimensions": "High resolution"
+      },
+      {
+        "path": "/docs/brand-assets/Barcelos Assets/Quarter Chicken + Chips - Top - Digital.jpg",
+        "description": "Quarter chicken with chips - top view",
+        "usage": "Menu grid, product cards",
+        "format": "JPG"
+      },
+      {
+        "path": "/docs/brand-assets/Barcelos Assets/Half Chicken - Top - Digital.jpg",
+        "description": "Half chicken - top view",
+        "usage": "Signature items, hero products",
+        "format": "JPG"
+      },
+      {
+        "path": "/docs/brand-assets/Barcelos Assets/Family Pack - Landscape - Digital (1).jpg",
+        "description": "Family pack meal - landscape composition",
+        "usage": "Family offerings, value meals section",
+        "format": "JPG"
+      },
+      {
+        "path": "/docs/brand-assets/Barcelos Assets/super family pack_TOP.jpg",
+        "description": "Super family pack - top view",
+        "usage": "Premium family meals, sharing plates",
+        "format": "JPG"
+      },
+      {
+        "path": "/docs/brand-assets/Barcelos Assets/Chicken livers - Top - Digital.jpg",
+        "description": "Chicken livers dish - top view",
+        "usage": "Menu specialty items",
+        "format": "JPG"
+      }
+    ]
+  },
+  "needed": [
+    {
+      "id": "hero-bg-homepage",
+      "description": "Homepage hero background - dramatic flame-grilled chicken with fire/grill visible, shot in warm lighting",
+      "dimensions": "1920x1080px minimum (hero banner)",
+      "priority": "critical",
+      "usage": "Homepage hero section",
+      "style_notes": "Should show flames, grill action, appetizing close-up. Warm tones, dramatic lighting."
+    },
+    {
+      "id": "heritage-hero",
+      "description": "Barcelos town in Portugal - scenic bridge and historic architecture (from PDF page 5)",
+      "dimensions": "1920x1080px",
+      "priority": "high",
+      "usage": "Our Story page hero",
+      "style_notes": "Authentic Portuguese location establishing heritage"
+    },
+    {
+      "id": "barcelos-rooster-legend",
+      "description": "Decorative Barcelos rooster (Galo de Barcelos) - colourful Portuguese ceramic rooster",
+      "dimensions": "800x800px",
+      "priority": "high",
+      "usage": "Our Story legend section, brand heritage",
+      "style_notes": "Traditional painted ceramic rooster, colourful, authentic Portuguese craft"
+    },
+    {
+      "id": "global-presence-map",
+      "description": "World map showing Barcelos presence in 12 countries with rooster icons",
+      "dimensions": "1200x600px",
+      "priority": "medium",
+      "usage": "Our Story global reach section",
+      "style_notes": "Infographic style, brand colours, location markers"
+    },
+    {
+      "id": "central-kitchen-exterior",
+      "description": "Barcelos central kitchen facility exterior (reference: PDF page 11)",
+      "dimensions": "1200x800px",
+      "priority": "medium",
+      "usage": "Quality/sourcing section",
+      "style_notes": "Professional facility, clean, modern"
+    },
+    {
+      "id": "central-kitchen-truck",
+      "description": "Barcelos branded delivery truck with sauce bottles graphic",
+      "dimensions": "1200x800px",
+      "priority": "medium",
+      "usage": "Quality/distribution section",
+      "style_notes": "Shows distribution network, brand visibility"
+    },
+    {
+      "id": "flame-grill-process",
+      "description": "Chicken on flame grill - action shot showing actual grilling over flames",
+      "dimensions": "1200x800px or video",
+      "priority": "critical",
+      "usage": "Homepage 'Why Flame-Grilled' section, process storytelling",
+      "style_notes": "Close-up of chicken on grill with visible flames, char marks forming"
+    },
+    {
+      "id": "peri-peri-bottles",
+      "description": "Line-up of 5 peri-peri sauce bottles (Tangy Lemon, Prego, Mild, Veri, Supa)",
+      "dimensions": "1600x900px",
+      "priority": "high",
+      "usage": "Menu page, flavour selector, Our Story offering section",
+      "style_notes": "Bottles with distinct colour coding for heat levels, clean product shot"
+    },
+    {
+      "id": "store-interior-standalone",
+      "description": "Barcelos standalone restaurant interior - modern, welcoming dining area",
+      "dimensions": "1200x800px",
+      "priority": "high",
+      "usage": "Locations page, franchise page standalone option",
+      "style_notes": "Clean, inviting, showing seating, counter, branding. Reference PDF page 22."
+    },
+    {
+      "id": "store-exterior-standalone",
+      "description": "Barcelos standalone store exterior with outdoor seating and red umbrellas",
+      "dimensions": "1200x800px",
+      "priority": "high",
+      "usage": "Franchise page, locations showcase",
+      "style_notes": "Shows brand signage, inviting exterior, modern design. Reference PDF page 22."
+    },
+    {
+      "id": "container-store-exterior",
+      "description": "Barcelos red shipping container store with open service windows",
+      "dimensions": "1200x800px",
+      "priority": "high",
+      "usage": "Franchise page container option",
+      "style_notes": "Distinctive red container, brand signage, counter seating. Reference PDF page 26."
+    },
+    {
+      "id": "in-store-format",
+      "description": "Barcelos in-store format (petrol station or food court kiosk)",
+      "dimensions": "1200x800px",
+      "priority": "medium",
+      "usage": "Franchise page in-store option",
+      "style_notes": "Compact format, branded counter, menu boards. Reference PDF page 21."
+    },
+    {
+      "id": "training-academy",
+      "description": "Franchisees in training at Barcelos Training Academy",
+      "dimensions": "1200x800px",
+      "priority": "medium",
+      "usage": "Franchise page training section",
+      "style_notes": "Professional training environment, people engaged in learning"
+    },
+    {
+      "id": "menu-board-burger",
+      "description": "Flame-grilled chicken burgers with cheese, lettuce, sesame buns on slate board",
+      "dimensions": "1200x800px",
+      "priority": "high",
+      "usage": "Menu page burgers section, homepage featured",
+      "style_notes": "Appetizing, premium presentation. Some imagery available in PDF page 7."
+    },
+    {
+      "id": "menu-board-platters",
+      "description": "Grilled chicken platter with rice and vegetarian side dishes",
+      "dimensions": "1200x800px",
+      "priority": "high",
+      "usage": "Menu page meals section, homepage featured",
+      "style_notes": "Colorful rice, wholesome presentation. Reference PDF page 7."
+    },
+    {
+      "id": "vegetarian-options",
+      "description": "Flame-grilled paneer or vegetable skewers/wraps",
+      "dimensions": "1200x800px",
+      "priority": "high",
+      "usage": "Menu page veg section - critical for India market",
+      "style_notes": "Must look as premium and appealing as chicken items. Char marks visible."
+    },
+    {
+      "id": "family-dining-scene",
+      "description": "Indian family (multigenerational) enjoying Barcelos meal together, smiling",
+      "dimensions": "1600x900px",
+      "priority": "critical",
+      "usage": "Homepage social proof, Our Story values section",
+      "style_notes": "Authentic Indian family, genuine emotions, Barcelos branding visible on food/packaging. Represents 'togetherness' value."
+    },
+    {
+      "id": "young-professionals-dining",
+      "description": "Young Indian professionals/friends sharing Barcelos meal in modern setting",
+      "dimensions": "1200x800px",
+      "priority": "high",
+      "usage": "Homepage lifestyle, target audience representation",
+      "style_notes": "24-38 age range, urban, aspirational but approachable. Food Instagram-worthy."
+    },
+    {
+      "id": "delivery-packaging",
+      "description": "Barcelos branded delivery packaging - bags, boxes with logo",
+      "dimensions": "1200x800px",
+      "priority": "medium",
+      "usage": "Order page, delivery information",
+      "style_notes": "Clean, professional packaging maintaining food quality"
+    },
+    {
+      "id": "mobile-ordering",
+      "description": "Hand holding phone showing Barcelos ordering interface (Swiggy/Zomato or direct)",
+      "dimensions": "800x1200px (portrait)",
+      "priority": "medium",
+      "usage": "Order page, mobile ordering CTA",
+      "style_notes": "Clean UI, easy ordering flow visible"
+    },
+    {
+      "id": "staff-in-uniform",
+      "description": "Barcelos staff members in branded uniforms, smiling, welcoming",
+      "dimensions": "1200x800px",
+      "priority": "medium",
+      "usage": "Careers page, franchise page (staff training)",
+      "style_notes": "Diverse team, professional, warm, inviting"
+    },
+    {
+      "id": "franchise-meeting",
+      "description": "Franchise prospect meeting with Barcelos team, professional setting",
+      "dimensions": "1200x800px",
+      "priority": "low",
+      "usage": "Franchise page process section",
+      "style_notes": "Professional, partnership feel"
+    },
+    {
+      "id": "store-opening-celebration",
+      "description": "New Barcelos store grand opening with staff, mascot, balloons",
+      "dimensions": "1200x800px",
+      "priority": "low",
+      "usage": "Franchise page success stories, testimonials",
+      "style_notes": "Celebratory, exciting, community focused. Reference PDF page 32."
+    },
+    {
+      "id": "ingredients-fresh",
+      "description": "Fresh ingredients - chicken, vegetables, spices, quality sourcing",
+      "dimensions": "1200x800px",
+      "priority": "medium",
+      "usage": "Our Story quality section, sourcing commitment",
+      "style_notes": "Farm-fresh feel, quality ingredients, preparation care"
+    },
+    {
+      "id": "offers-promotional-banner",
+      "description": "Generic promotional banner template for limited-time offers",
+      "dimensions": "1920x400px (banner)",
+      "priority": "medium",
+      "usage": "Offers page, homepage offers teaser",
+      "style_notes": "Bold, attention-grabbing, brand colours, space for offer text"
+    },
+    {
+      "id": "location-pin-map",
+      "description": "India map with Barcelos location markers in metro cities",
+      "dimensions": "1200x1200px",
+      "priority": "medium",
+      "usage": "Locations page, homepage location widget",
+      "style_notes": "Infographic style, brand colours, clear city labels"
+    },
+    {
+      "id": "contact-hero",
+      "description": "Welcoming contact/customer service themed image",
+      "dimensions": "1920x600px",
+      "priority": "low",
+      "usage": "Contact page hero",
+      "style_notes": "Friendly staff, phone/communication theme, or store exterior"
+    },
+    {
+      "id": "catering-setup",
+      "description": "Barcelos catering setup for event - buffet style or boxed meals",
+      "dimensions": "1200x800px",
+      "priority": "medium",
+      "usage": "Catering page (if built)",
+      "style_notes": "Professional event catering, corporate or celebration setting"
+    },
+    {
+      "id": "spice-level-icons",
+      "description": "5 chili pepper icons in graduated colours (green to red) representing heat levels",
+      "dimensions": "Icon set 256x256px each",
+      "priority": "high",
+      "usage": "Menu page filters, flavour selector UI",
+      "style_notes": "Must match Peri Zone branding. Reference PDF page 9: Tangy Lemon (green), Prego (brown), Mild (yellow), Veri (orange), Supa (red)."
+    },
+    {
+      "id": "value-icons",
+      "description": "Icon set for 4 brand values: Honesty (heart-hands), Wholesomeness (leaf-hands), Value (gift), Togetherness (hands-together)",
+      "dimensions": "Icon set 256x256px each",
+      "priority": "high",
+      "usage": "Our Story values section",
+      "style_notes": "Simple, recognisable, brand style. Reference PDF page 4."
+    },
+    {
+      "id": "404-error-image",
+      "description": "Friendly 404 error page graphic with Barcelos rooster mascot",
+      "dimensions": "800x600px",
+      "priority": "low",
+      "usage": "404 error page",
+      "style_notes": "Playful, on-brand, 'lost pilgrim' theme callback"
+    },
+    {
+      "id": "loading-animation",
+      "description": "Barcelos rooster or flame animation for page loading states",
+      "dimensions": "Animated GIF or Lottie 400x400px",
+      "priority": "low",
+      "usage": "Page transitions, loading states",
+      "style_notes": "Smooth, quick, brand colours"
+    }
+  ],
+  "notes": {
+    "photography_style": "All food photography should show flame-grill char marks, warm lighting, appetizing composition. Avoid generic stock food images. People photography should feature authentic Indian customers/families, diverse ages, genuine emotions. Avoid overly staged or stock-photo feel.",
+    "india_localization": "Ensure lifestyle photography features Indian people, settings, and context. Vegetarian options must be photographed with same quality and appeal as chicken items.",
+    "stock_photo_sources": "If using stock photos as placeholders: Unsplash, Pexels for food/restaurant scenes. Prioritize authentic, non-generic imagery. Budget for custom photography shoot for hero items and key lifestyle scenes.",
+    "video_needs": "Consider video for: flame-grill process (20-30 sec), brand story animation (1-2 min), customer testimonials (15-30 sec each)."
+  }
+}

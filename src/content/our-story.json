@@ -1,0 +1,98 @@
+{
+  "hero": {
+    "title": "The Legend Lives On",
+    "subtitle": "From Portuguese roots to global flame-grilled excellence",
+    "image": "/images/heritage-hero.jpg"
+  },
+  "legend": {
+    "title": "The Legend of Barcelos",
+    "content": "Legend has it, years ago, a pilgrim was passing through the town of Barcelos in Portugal. Wrongfully accused of a crime and sentenced to hang, he was brought before a judge about to sit down to his roasted chicken dinner. 'If this rooster gets up and crows, then I'm an innocent man' - exclaimed the pilgrim. And that is exactly what happened! The pilgrim was freed and so the Barcelos Legend was born.",
+    "moral": "We've passed this story on through generations and with it, treasured recipes, time-tested practices, and age-old traditions. No gimmicks or imitations. At Barcelos, we value authenticity and stay true to our Afro-Portuguese roots when it comes to our flame-grilled chicken and our original Peri-Peri marinades.",
+    "image": "/images/barcelos-rooster.jpg"
+  },
+  "heritage": {
+    "title": "Loved Locally, Shared Globally",
+    "subtitle": "Founded in 1993",
+    "content": "Barcelos Flame Grilled Chicken originated from a passion for combining traditional Portuguese flame grilling techniques with a secret blend of spices and flavours. Since then, Barcelos has become a symbol of bringing people together through the joy of shared meals, creating lasting memories for families and friends.",
+    "global_reach": "We have grown into 12 countries globally",
+    "image": "/images/global-map.jpg"
+  },
+  "values": [
+    {
+      "title": "Honesty",
+      "description": "We believe in transparency and authenticity in everything we do",
+      "icon": "heart-hands"
+    },
+    {
+      "title": "Wholesomeness",
+      "description": "Traditional, healthy, and delicious home-style cuisine balanced with modern fast-paced living",
+      "icon": "leaf-hands"
+    },
+    {
+      "title": "Value",
+      "description": "An honest way to bring people from all walks of life together over a wholesome, flavourful meal",
+      "icon": "gift"
+    },
+    {
+      "title": "Togetherness",
+      "description": "Bringing families and friends together through the joy of shared meals",
+      "icon": "hands-together"
+    }
+  ],
+  "brand": {
+    "title": "Authentic Flame-Grilled Chicken",
+    "description": "The Barcelos brand is rooted in tradition with wholesome, home-style elements that comfort our customers and give them the feeling of coming home. We exude a warm, welcoming energy. We are honest, down-to-earth and delicious. Our colourful, playful elements represent our passion for bringing people together over a meal. We carry the name and legend of the pilgrim of Barcelos proudly.",
+    "image": "/images/barcelos-town.jpg"
+  },
+  "mission": {
+    "title": "Our Mission",
+    "statement": "To unite all the people of the world around a Barcelos meal",
+    "pillars": [
+      "Recognise peri-peri as the flavour of togetherness",
+      "Deliver quality, value and authentic flavour",
+      "Provide healthy, fast, fresh home-style food",
+      "Create a thriving ecosystem for staff and suppliers"
+    ]
+  },
+  "offering": {
+    "title": "Traditional Portuguese Flame-Grilled Excellence",
+    "description": "Our fast-casual restaurants specialise in the traditional Portuguese way of serving wholesome flame-grilled chicken - prepared as authentically as it was by the Portuguese settlers in Africa hundreds of years ago. Our recipes have been passed down through generations and are still our best-kept secret. We stay true to our Afro-Portuguese roots. Barcelos original flavour remains unsurpassed and after centuries, still satisfies even the most discerning palate.",
+    "peri_zones": [
+      {
+        "name": "Tangy Lemon",
+        "level": "Mild",
+        "description": "Light and refreshing with a citrus twist"
+      },
+      {
+        "name": "Prego",
+        "level": "Mild-Medium",
+        "description": "Classic Portuguese-style marinade"
+      },
+      {
+        "name": "Mild Peri",
+        "level": "Medium",
+        "description": "Gentle heat with authentic peri-peri flavour"
+      },
+      {
+        "name": "Veri Peri",
+        "level": "Hot",
+        "description": "Bold peri-peri with serious kick"
+      },
+      {
+        "name": "Supa Peri",
+        "level": "Extra Hot",
+        "description": "Maximum heat for the brave"
+      }
+    ]
+  },
+  "indiaStory": {
+    "title": "Barcelos Comes to India",
+    "content": "India's vibrant food culture and love for bold, authentic flavours make it the perfect home for Barcelos. We bring our time-honoured Portuguese flame-grilling tradition, adapted to celebrate Indian tastes. With vegetarian options crafted with the same care, spice levels tailored to the Indian palate, and our commitment to quality ingredients, Barcelos offers India a premium yet accessible dining experience.",
+    "why_india": "We're here because Indians appreciate genuine craftsmanship and flavour. Our flame-grilled chicken, vegetarian options, and signature peri-peri marinades offer something different in India's competitive QSR market - authentic international heritage combined with respect for local preferences."
+  },
+  "quality": {
+    "title": "The Central Standard for Quality",
+    "description": "We source quality chicken straight from the farm, marinate and vacuum seal it at our central kitchen so you are guaranteed unique Barcelos flavour every time. Ingredients are purchased via centralised procurement, ensuring quality, price advantages and consistency.",
+    "commitment": "Every meal is prepared with the same care and attention, whether you're dining in Mumbai, Delhi, or Bangalore."
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "stores": [
+    {
+      "id": "nagpur-shivaji-nagar",
+      "name": "Barcelos Nagpur",
+      "address": {
+        "line1": "244 Hill Road, Narayani House",
+        "line2": "Shivaji Nagar (Ram Nagar)",
+        "city": "Nagpur",
+        "state": "Maharashtra",
+        "pincode": "440010"
+      },
+      "coordinates": {
+        "lat": 21.136370,
+        "lng": 79.056900
+      },
+      "phone": "+91 8087656787",
+      "email": "nagpur@barcelos.co.in",
+      "hours": {
+        "weekday": "11:00 AM - 11:00 PM",
+        "weekend": "11:00 AM - 11:00 PM"
+      },
+      "orderUrl": "https://petpooja.com/barcelos-nagpur",
+      "features": ["Dine-in", "Takeaway", "Delivery"],
+      "image": "/images/stores/nagpur-shivaji-nagar.jpg"
+    },
+    {
+      "id": "bangalore-embassy-tech-village",
+      "name": "Barcelos Bengaluru",
+      "address": {
+        "line1": "Block E, Unit Number 2, Parcel 5",
+        "line2": "Embassy Tech Village, Devarabeesanahalli, Outer Ring Road",
+        "city": "Bangalore",
+        "state": "Karnataka",
+        "pincode": "560103"
+      },
+      "coordinates": {
+        "lat": 12.930000,
+        "lng": 77.690000
+      },
+      "phone": "",
+      "email": "bangalore@barcelos.co.in",
+      "hours": {
+        "weekday": "11:00 AM - 11:00 PM",
+        "weekend": "11:00 AM - 11:00 PM"
+      },
+      "orderUrl": "https://petpooja.com/barcelos-bangalore",
+      "features": ["Dine-in", "Takeaway", "Delivery"],
+      "image": "/images/stores/bangalore-embassy-tech-village.jpg"
+    }
+  ]
+}

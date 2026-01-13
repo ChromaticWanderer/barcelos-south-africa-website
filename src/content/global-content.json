@@ -1,0 +1,63 @@
+{
+  "site_name": "Barcelos India",
+  "tagline": "Flame Grilled Chicken",
+  "brand_promise": "Where Flame Meets Flavour",
+  "meta": {
+    "default_title": "Barcelos India - Authentic Flame Grilled Chicken",
+    "default_description": "Experience authentic Portuguese flame-grilled chicken with peri-peri perfection. Founded in 1993, now in India. Order online for delivery or visit our restaurants.",
+    "keywords": "flame grilled chicken, peri peri chicken India, Portuguese chicken, Barcelos India, grilled chicken restaurant, chicken delivery, halal chicken, vegetarian options",
+    "og_image": "/images/og-barcelos-india.jpg",
+    "twitter_handle": "@barcelosindia"
+  },
+  "primary_cta": {
+    "text": "Order Now",
+    "url": "/order",
+    "style": "primary"
+  },
+  "secondary_cta": {
+    "text": "Find Locations",
+    "url": "/locations",
+    "style": "secondary"
+  },
+  "usps": [
+    "Flame-grilled, not fried",
+    "24-hour marinated in secret peri-peri blend",
+    "Portuguese heritage since 1993",
+    "12 countries worldwide",
+    "Vegetarian options available",
+    "Quality guaranteed"
+  ],
+  "tone_guidelines": {
+    "voice": "Confident but humble, specific not vague, welcoming to all",
+    "avoid": "Generic template language, overpromising, being disconnected from India",
+    "examples": {
+      "good": "Flame-grilled over real flames, marinated for 24 hours in our signature peri-peri blend",
+      "bad": "The most delicious chicken you've ever tasted, guaranteed!"
+    }
+  },
+  "india_specific": {
+    "payment_methods": ["UPI", "Cards", "Cash on Delivery", "Net Banking", "Wallets"],
+    "delivery_partners": ["Swiggy", "Zomato", "Direct Ordering (coming soon)"],
+    "dietary_tags": ["Vegetarian", "Halal", "Spice Level Indicators"],
+    "languages_supported": ["English", "Hindi (future)"],
+    "trust_signals": [
+      "FSSAI certified",
+      "Hygiene standards maintained",
+      "Quality sourcing",
+      "International brand with local adaptation"
+    ]
+  },
+  "emergency_banner": {
+    "enabled": false,
+    "message": "",
+    "type": "info",
+    "link": "",
+    "dismissible": true
+  },
+  "festive_messaging": {
+    "enabled": false,
+    "occasion": "",
+    "message": "",
+    "offers_link": "/offers"
+  }
+}

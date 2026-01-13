@@ -1,0 +1,340 @@
+{
+  "hero": {
+    "title": "Join the Barcelos Team",
+    "subtitle": "Partner with a globally successful, trustworthy, and time-tested franchise",
+    "background_image": "/images/franchise-hero.jpg"
+  },
+  "why_partner": {
+    "title": "Why Partner with Barcelos?",
+    "intro": "Starting any business takes a lot of energy, endurance and patience. Opening a franchise means you don't have to do it alone. Barcelos is the flame-grilled category leader with proven systems and comprehensive support.",
+    "benefits": [
+      {
+        "title": "Proven Brand",
+        "description": "A widely-known and recognised brand name with international heritage",
+        "icon": "badge"
+      },
+      {
+        "title": "Track Record",
+        "description": "Operating in 12 countries with a history of proven performance and success",
+        "icon": "chart"
+      },
+      {
+        "title": "Market Differentiation",
+        "description": "Flame-grilled category leadership in India's crowded QSR market",
+        "icon": "flame"
+      },
+      {
+        "title": "Comprehensive Training",
+        "description": "10-day training at Barcelos Training Academy plus ongoing support",
+        "icon": "graduation"
+      },
+      {
+        "title": "Operational Excellence",
+        "description": "Manual of operations, proven systems, and field manager support",
+        "icon": "settings"
+      },
+      {
+        "title": "Marketing Power",
+        "description": "National campaigns, social media, local store marketing support",
+        "icon": "megaphone"
+      },
+      {
+        "title": "Central Kitchen",
+        "description": "Guaranteed quality, consistency, and cost advantages",
+        "icon": "kitchen"
+      },
+      {
+        "title": "Multiple Formats",
+        "description": "Standalone stores, containers, in-store options to fit your site",
+        "icon": "building"
+      }
+    ]
+  },
+  "franchise_requirements": {
+    "title": "Is Barcelos Right for You?",
+    "intro": "In our experience, it takes a special mix of qualities and criteria to open a franchise successfully.",
+    "checklist": [
+      "Are you passionate about fantastic food, great customer service and the Barcelos Brand?",
+      "Do you share our family values of togetherness, honesty and value?",
+      "Are you a service-oriented individual?",
+      "Do you take a proactive approach to challenges?",
+      "Are you energetic and willing to put in the hours required to build success?",
+      "Do you work well with people and have great interpersonal skills?",
+      "Can you obtain the necessary finances?"
+    ],
+    "closing": "If you tick all the boxes, there's always room for one more at our table."
+  },
+  "investment_options": [
+    {
+      "type": "Standalone Store",
+      "description": "Full-service restaurant with dine-in, takeaway, and delivery",
+      "investment_range": "₹1.5 Crore - ₹2 Crore",
+      "joining_fee": "₹12 Lakh (approx)",
+      "royalty": "5% of monthly net turnover",
+      "advertising_fee": "3% of monthly net turnover",
+      "space_required": "120-200 sqm",
+      "formats": [
+        "Option 1: 120 sqm with compact seating",
+        "Option 2: 170 sqm with full dine-in",
+        "Option 3: 150 sqm alternative layout",
+        "Option 4: Premium format with extended seating"
+      ],
+      "ideal_locations": [
+        "High foot traffic areas",
+        "Near residential areas",
+        "Shopping centers",
+        "Entertainment districts"
+      ],
+      "image": "/images/franchise/standalone-store.jpg"
+    },
+    {
+      "type": "Container Store",
+      "description": "Modern, moveable format perfect for high-demand, underserved sites",
+      "investment_range": "From ₹1 Crore",
+      "joining_fee": "₹8 Lakh (approx)",
+      "royalty": "5% of monthly net turnover",
+      "advertising_fee": "3% of monthly net turnover",
+      "space_required": "Compact footprint",
+      "benefits": [
+        "Lower start-up cost - reach profitability quicker",
+        "Fast roll-out time - trading sooner",
+        "Moveable, reusable asset - no long-term lease risk",
+        "Lower operating and rental costs",
+        "Access to high-demand, underserved sites",
+        "Scalable, modular expansion",
+        "Strong brand visibility",
+        "High operational efficiency",
+        "Faster ROI and shorter payback period",
+        "Ideal for first-time and multi-unit operators"
+      ],
+      "ideal_locations": [
+        "Petrol stations (ENGEN partnership)",
+        "Shopping mall food courts",
+        "Township areas",
+        "Rural routes",
+        "High-traffic compact plots"
+      ],
+      "image": "/images/franchise/container-store.jpg"
+    },
+    {
+      "type": "In-Store",
+      "description": "Compact format for petrol stations and food courts",
+      "investment_range": "Contact for details",
+      "joining_fee": "Contact for details",
+      "ideal_locations": [
+        "ENGEN petrol stations",
+        "Shopping mall food courts",
+        "Transit hubs"
+      ],
+      "image": "/images/franchise/in-store.jpg"
+    }
+  ],
+  "process": {
+    "title": "How to Get On Board",
+    "steps": [
+      {
+        "number": 1,
+        "title": "Location",
+        "description": "Decide on the area or town you would like to open your franchise",
+        "icon": "location"
+      },
+      {
+        "number": 2,
+        "title": "Interview",
+        "description": "Call us to arrange an interview at the Barcelos Head Office",
+        "icon": "interview"
+      },
+      {
+        "number": 3,
+        "title": "Contract",
+        "description": "Sign your Barcelos contract and pay a portion of your start-up cost",
+        "icon": "contract"
+      },
+      {
+        "number": 4,
+        "title": "Building",
+        "description": "Receive building plans and start building your store",
+        "icon": "building"
+      },
+      {
+        "number": 5,
+        "title": "Finishes",
+        "description": "We'll then install fittings and equipment",
+        "icon": "tools"
+      },
+      {
+        "number": 6,
+        "title": "Training",
+        "description": "Receive training at Barcelos Training Academy",
+        "icon": "training"
+      },
+      {
+        "number": 7,
+        "title": "Opening",
+        "description": "Open your Barcelos store to the public",
+        "icon": "open"
+      },
+      {
+        "number": 8,
+        "title": "Support",
+        "description": "Enjoy 10 days of dedicated onsite support",
+        "icon": "support"
+      }
+    ]
+  },
+  "training": {
+    "title": "The Barcelos Training Academy",
+    "description": "Initial training happens over a 10-day period starting at the Barcelos Training Academy situated in Centurion (Gauteng, South Africa), followed by in-store training of both management and staff prior to your store opening.",
+    "philosophy": "We understand the value of passing down our traditions, values and of course Barcelos customer experience. Beyond food preparation, we provide essential training to everyone that is involved with the day-to-day running of the store.",
+    "coverage": [
+      "Food preparation and flame-grilling techniques",
+      "Quality control and consistency",
+      "Customer service excellence",
+      "Operations management",
+      "Inventory and ordering systems",
+      "Health and safety protocols",
+      "Marketing and local store activation",
+      "Staff management and training"
+    ],
+    "ongoing_support": [
+      "Field manager regular store visits",
+      "Operational audits and guidance",
+      "Marketing campaign support",
+      "Menu updates and innovation",
+      "Troubleshooting and problem-solving",
+      "Peer franchise network"
+    ]
+  },
+  "site_criteria": {
+    "title": "Ideal Site Characteristics",
+    "criteria": [
+      {
+        "factor": "Foot Traffic",
+        "requirement": "Medium to high foot traffic",
+        "icon": "pedestrian"
+      },
+      {
+        "factor": "Parking",
+        "requirement": "Easy access to parking",
+        "icon": "parking"
+      },
+      {
+        "factor": "Demographics",
+        "requirement": "Near residential areas with target income levels",
+        "icon": "home"
+      },
+      {
+        "factor": "Complementary",
+        "requirement": "Fuel & convenience sites (ENGEN partnership)",
+        "icon": "fuel"
+      }
+    ]
+  },
+  "success_stories": {
+    "title": "Franchise Success Stories",
+    "note": "Coming soon - hear from our successful franchise partners across South Africa and globally"
+  },
+  "faqs": [
+    {
+      "question": "What is the total investment required?",
+      "answer": "Investment varies by format: Standalone stores require ₹1.5-2 Crore, Container stores from ₹1 Crore. This includes franchise fee, fit-out, equipment, and initial working capital. Contact us for a detailed breakdown."
+    },
+    {
+      "question": "How long does it take to open a store?",
+      "answer": "From contract signing to opening: Standalone stores typically take 4-6 months, Container stores 2-3 months depending on site readiness and approvals."
+    },
+    {
+      "question": "What ongoing fees do I pay?",
+      "answer": "5% royalty fee and 3% advertising fee, both calculated on monthly net turnover. These fees fund your ongoing support, training, marketing, and brand development."
+    },
+    {
+      "question": "Do I need restaurant experience?",
+      "answer": "Restaurant experience is helpful but not required. We provide comprehensive training and ongoing support. What matters most is your passion for the brand, customer service orientation, and willingness to follow proven systems."
+    },
+    {
+      "question": "Can I own multiple franchises?",
+      "answer": "Yes! Multi-unit ownership is encouraged. Many of our most successful partners operate multiple locations. The Container format makes expansion particularly affordable and low-risk."
+    },
+    {
+      "question": "What territories are available in India?",
+      "answer": "We're actively expanding across Tier-1 cities (Mumbai, Delhi NCR, Bangalore, Pune, Hyderabad) and select Tier-2 cities. Contact us to discuss territory availability."
+    },
+    {
+      "question": "How is Barcelos different from other chicken franchises?",
+      "answer": "We're the flame-grilled category leader, not fried chicken. Our Portuguese heritage, authentic preparation methods, signature peri-peri marinades, and international brand strength make us uniquely positioned in India's QSR market."
+    },
+    {
+      "question": "What support do I receive after opening?",
+      "answer": "10 days dedicated on-site support at opening, ongoing field manager visits, marketing campaign support, operational guidance, training updates, and access to our franchise community."
+    }
+  ],
+  "cta": {
+    "title": "Ready to Join the Barcelos Family?",
+    "description": "Quality, value, and consistency are always Better Together.",
+    "form_fields": [
+      {
+        "name": "full_name",
+        "label": "Full Name",
+        "type": "text",
+        "required": true
+      },
+      {
+        "name": "email",
+        "label": "Email Address",
+        "type": "email",
+        "required": true
+      },
+      {
+        "name": "phone",
+        "label": "Phone Number",
+        "type": "tel",
+        "required": true
+      },
+      {
+        "name": "city",
+        "label": "Preferred City/Location",
+        "type": "text",
+        "required": true
+      },
+      {
+        "name": "investment_capacity",
+        "label": "Investment Capacity",
+        "type": "select",
+        "options": [
+          "₹1-1.5 Crore",
+          "₹1.5-2 Crore",
+          "₹2+ Crore"
+        ],
+        "required": true
+      },
+      {
+        "name": "experience",
+        "label": "Business/Restaurant Experience",
+        "type": "textarea",
+        "required": false
+      },
+      {
+        "name": "format_interest",
+        "label": "Format Interest",
+        "type": "checkbox",
+        "options": [
+          "Standalone Store",
+          "Container Store",
+          "In-Store"
+        ],
+        "required": true
+      },
+      {
+        "name": "message",
+        "label": "Tell us about yourself and your interest",
+        "type": "textarea",
+        "required": false
+      }
+    ],
+    "response_sla": "We'll contact you within 48 hours",
+    "contact": {
+      "email": "barcelos.india@barcelos.com",
+      "address": "[India Head Office Address - TBD]"
+    }
+  }
+}

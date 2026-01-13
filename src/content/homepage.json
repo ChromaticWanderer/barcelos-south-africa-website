@@ -1,0 +1,160 @@
+{
+  "hero": {
+    "title": "Where Flame Meets Flavour",
+    "subtitle": "Authentic Portuguese flame-grilled chicken with peri-peri perfection, now in India",
+    "cta_primary": {
+      "text": "Order Now",
+      "link": "/order"
+    },
+    "cta_secondary": {
+      "text": "View Menu",
+      "link": "/menu"
+    },
+    "background_image": "/images/hero-flame-grill.jpg"
+  },
+  "why_barcelos": {
+    "title": "Why Flame-Grilled?",
+    "subtitle": "Not fried. Not boiled. Grilled over real flames.",
+    "description": "Our traditional Portuguese flame-grilling technique locks in moisture and creates that signature char you can't get any other way. Each piece is marinated for 24 hours in our secret peri-peri blend, then grilled to perfection over open flames.",
+    "points": [
+      {
+        "title": "Authentic Preparation",
+        "description": "Time-tested Portuguese techniques passed down through generations",
+        "icon": "flame"
+      },
+      {
+        "title": "24-Hour Marinade",
+        "description": "Our secret peri-peri blend for maximum flavour",
+        "icon": "clock"
+      },
+      {
+        "title": "Quality Ingredients",
+        "description": "Farm-fresh chicken, centrally marinated for consistency",
+        "icon": "chicken"
+      },
+      {
+        "title": "Healthier Choice",
+        "description": "Flame-grilled means less oil, more flavour",
+        "icon": "heart"
+      }
+    ],
+    "video_or_animation": "/videos/flame-grill-process.mp4"
+  },
+  "featured_menu": {
+    "title": "Signature Favourites",
+    "subtitle": "Discover what makes Barcelos special",
+    "items": [
+      {
+        "name": "Quarter Chicken + Chips",
+        "description": "Flame-grilled perfection with crispy chips",
+        "image": "/images/products/quarter_chicken_chips.jpg",
+        "price_note": "Available in all peri-peri flavours",
+        "tags": ["bestseller"]
+      },
+      {
+        "name": "Half Chicken",
+        "description": "Tender, juicy, and packed with flavour",
+        "image": "/images/products/half_chicken.jpg",
+        "tags": ["signature"]
+      },
+      {
+        "name": "Chicken Burgers",
+        "description": "Flame-grilled patties on fresh buns",
+        "image": "/images/products/chicken_burger.jpg",
+        "tags": ["new", "quick"]
+      },
+      {
+        "name": "Family Pack",
+        "description": "Share the delicious - perfect for families",
+        "image": "/images/products/family_pack.jpg",
+        "tags": ["family", "value"]
+      }
+    ],
+    "cta": {
+      "text": "Explore Full Menu",
+      "link": "/menu"
+    }
+  },
+  "locations": {
+    "title": "Find Barcelos Near You",
+    "subtitle": "Now serving across India's major cities",
+    "widget_type": "interactive_map",
+    "cities": [
+      "Mumbai",
+      "Delhi NCR",
+      "Bangalore",
+      "Pune",
+      "Hyderabad"
+    ],
+    "cta": {
+      "text": "View All Locations",
+      "link": "/locations"
+    }
+  },
+  "offers_banner": {
+    "title": "Current Offers",
+    "items": [
+      {
+        "title": "Grand Opening Special",
+        "description": "20% off your first order",
+        "validity": "Limited time",
+        "link": "/offers"
+      }
+    ],
+    "cta": {
+      "text": "View All Offers",
+      "link": "/offers"
+    }
+  },
+  "social_proof": {
+    "title": "What Our Customers Say",
+    "testimonials": [
+      {
+        "name": "Priya M.",
+        "city": "Mumbai",
+        "quote": "Finally, authentic flame-grilled chicken in India! The peri-peri flavour is unlike anything else.",
+        "photo": "/images/testimonials/placeholder-1.jpg",
+        "rating": 5
+      },
+      {
+        "name": "Rahul K.",
+        "city": "Bangalore",
+        "quote": "Love that they have veg options too. The paneer grills are amazing!",
+        "photo": "/images/testimonials/placeholder-2.jpg",
+        "rating": 5
+      },
+      {
+        "name": "Anjali S.",
+        "city": "Delhi",
+        "quote": "Perfect for family dinners. Great value and the kids love it.",
+        "photo": "/images/testimonials/placeholder-3.jpg",
+        "rating": 5
+      }
+    ],
+    "instagram_feed": {
+      "handle": "@barcelosindia",
+      "cta": "Follow us on Instagram"
+    }
+  },
+  "brand_story_teaser": {
+    "title": "A Legend Born in Portugal",
+    "description": "From a miraculous tale of a crowing rooster to 12 countries worldwide, discover the Barcelos story.",
+    "cta": {
+      "text": "Learn More",
+      "link": "/our-story"
+    },
+    "background_image": "/images/barcelos-rooster.jpg"
+  },
+  "footer_cta": {
+    "title": "Experience the Barcelos Feeling",
+    "description": "Uplifted, rejuvenated, and ready for anything",
+    "cta_primary": {
+      "text": "Order Now",
+      "link": "/order"
+    },
+    "cta_secondary": {
+      "text": "Find a Restaurant",
+      "link": "/locations"
+    }
+  }
+}

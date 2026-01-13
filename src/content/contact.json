@@ -1,0 +1,94 @@
+{
+  "hero": {
+    "title": "Get in Touch",
+    "subtitle": "We're here to help"
+  },
+  "contact_methods": [
+    {
+      "type": "Customer Support",
+      "description": "Questions about orders, menu, or dining experience",
+      "email": "barcelos.india@barcelos.com",
+      "hours": "Mon-Sun, 10:00 AM - 10:00 PM IST"
+    },
+    {
+      "type": "Franchise Inquiries",
+      "description": "Interested in opening a Barcelos franchise?",
+      "email": "barcelos.india@barcelos.com",
+      "link": "/franchise",
+      "cta": "Learn More About Franchising"
+    },
+    {
+      "type": "Catering & Bulk Orders",
+      "description": "Corporate events, parties, large orders",
+      "email": "barcelos.india@barcelos.com",
+      "note": "Advance booking required"
+    },
+    {
+      "type": "Media & Press",
+      "description": "Media inquiries and partnership opportunities",
+      "email": "barcelos.india@barcelos.com"
+    },
+    {
+      "type": "Careers",
+      "description": "Join the Barcelos team",
+      "email": "barcelos.india@barcelos.com",
+      "link": "/careers"
+    }
+  ],
+  "feedback_form": {
+    "title": "Send Us a Message",
+    "fields": [
+      {
+        "name": "name",
+        "label": "Your Name",
+        "type": "text",
+        "required": true
+      },
+      {
+        "name": "email",
+        "label": "Email Address",
+        "type": "email",
+        "required": true
+      },
+      {
+        "name": "phone",
+        "label": "Phone Number",
+        "type": "tel",
+        "required": false
+      },
+      {
+        "name": "subject",
+        "label": "Subject",
+        "type": "select",
+        "options": [
+          "General Inquiry",
+          "Order Issue",
+          "Feedback",
+          "Franchise Interest",
+          "Catering Request",
+          "Other"
+        ],
+        "required": true
+      },
+      {
+        "name": "message",
+        "label": "Your Message",
+        "type": "textarea",
+        "required": true
+      }
+    ],
+    "response_time": "We typically respond within 24 hours"
+  },
+  "restaurant_locator_link": {
+    "title": "Find Your Nearest Restaurant",
+    "description": "Looking for a specific location? Use our restaurant finder.",
+    "cta": "Find Locations",
+    "link": "/locations"
+  },
+  "faq_link": {
+    "title": "Frequently Asked Questions",
+    "description": "Find quick answers to common questions.",
+    "cta": "View FAQs",
+    "link": "/faq"
+  }
+}

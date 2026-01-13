@@ -1,0 +1,91 @@
+{
+  "about_section": {
+    "logo": "/images/brand/barcelos-white-lockup.png",
+    "tagline": "Flame Grilled Chicken",
+    "description": "Authentic Portuguese flame-grilled chicken with peri-peri perfection. From our heritage to your plate.",
+    "social_links": [
+      {
+        "platform": "Facebook",
+        "url": "https://facebook.com/barcelosindia",
+        "icon": "facebook"
+      },
+      {
+        "platform": "Instagram",
+        "url": "https://instagram.com/barcelosindia",
+        "icon": "instagram"
+      },
+      {
+        "platform": "Twitter",
+        "url": "https://twitter.com/barcelosindia",
+        "icon": "twitter"
+      },
+      {
+        "platform": "YouTube",
+        "url": "https://youtube.com/@barcelosindia",
+        "icon": "youtube"
+      }
+    ]
+  },
+  "navigation": [
+    {
+      "title": "Menu",
+      "links": [
+        { "label": "All Items", "url": "/menu" },
+        { "label": "Meals & Combos", "url": "/menu#meals" },
+        { "label": "Burgers & Wraps", "url": "/menu#burgers" },
+        { "label": "Grilled Chicken", "url": "/menu#chicken" },
+        { "label": "Sides & Starters", "url": "/menu#sides" },
+        { "label": "Vegetarian", "url": "/menu#veg" },
+        { "label": "Nutritional Info", "url": "/nutrition" }
+      ]
+    },
+    {
+      "title": "Company",
+      "links": [
+        { "label": "Our Story", "url": "/our-story" },
+        { "label": "Locations", "url": "/locations" },
+        { "label": "Franchise", "url": "/franchise" },
+        { "label": "Careers", "url": "/careers" },
+        { "label": "Contact Us", "url": "/contact" }
+      ]
+    },
+    {
+      "title": "Order",
+      "links": [
+        { "label": "Order Online", "url": "/order" },
+        { "label": "Order on Swiggy", "url": "https://swiggy.com/barcelos", "external": true },
+        { "label": "Order on Zomato", "url": "https://zomato.com/barcelos", "external": true },
+        { "label": "Current Offers", "url": "/offers" },
+        { "label": "Catering & Bulk Orders", "url": "/catering" }
+      ]
+    },
+    {
+      "title": "Support",
+      "links": [
+        { "label": "FAQs", "url": "/faq" },
+        { "label": "Delivery Info", "url": "/delivery" },
+        { "label": "Allergen Information", "url": "/allergens" },
+        { "label": "Feedback", "url": "/contact#feedback" }
+      ]
+    }
+  ],
+  "legal": [
+    { "label": "Privacy Policy", "url": "/privacy-policy" },
+    { "label": "Terms of Service", "url": "/terms" },
+    { "label": "Cookie Policy", "url": "/cookies" },
+    { "label": "Sitemap", "url": "/sitemap.xml" }
+  ],
+  "certifications": [
+    {
+      "name": "FSSAI",
+      "logo": "/images/certifications/fssai-logo.png",
+      "description": "Food Safety and Standards Authority of India certified"
+    }
+  ],
+  "contact_info": {
+    "email": "barcelos.india@barcelos.com",
+    "address": "[India Head Office Address - TBD]"
+  },
+  "copyright": "© 2025 Barcelos India. All rights reserved.",
+  "global_brand_note": "Part of the global Barcelos family - operating in 12 countries worldwide since 1993."
+}
