@@ -122,7 +122,7 @@ export const socialLinks = [
  */
 export const orderNowConfig = {
   label: "ORDER NOW",
-  comingSoonLabel: "COMING SOON",
+  comingSoonLabel: "COMING SOON : ORDER NOW",
   href: "https://petpooja.com/barcelos-india", // Placeholder - to be updated
   isExternal: true,
   ariaLabel: "Order from Barcelos via PetPooja (opens in new tab)",
