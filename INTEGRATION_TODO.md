@@ -1,5 +1,36 @@
 # Integration To-Do List - Missing Information
 
+## Site Status
+
+**LIVE:** https://barcelos.co.in (deployed January 16, 2026)
+
+| Item | Status |
+|------|--------|
+| Website | LIVE |
+| Domain + SSL | CONFIGURED |
+| GitHub Repo | https://github.com/ChromaticWanderer/barcelos-india-website |
+| Vercel | Auto-deploys on push to main |
+| Online Ordering | COMING SOON (PetPooja not ready) |
+
+---
+
+## PetPooja Online Ordering
+
+**Status:** WAITING - Buttons show "COMING SOON : ORDER NOW"
+
+**When ready to enable:**
+1. Get the PetPooja ordering URL
+2. Edit `src/lib/constants/navigation.ts`:
+   ```typescript
+   export const orderNowConfig = {
+     href: "https://actual-petpooja-url.com",  // Update this
+     comingSoon: false,  // Change to false
+   }
+   ```
+3. Commit and push - Vercel auto-deploys
+
+---
+
 ## Google Maps Setup (Package 1.2)
 
 ### COMPLETED
