@@ -6,7 +6,6 @@ import { GraduationCap, Factory, Hammer, Building2 } from "lucide-react"
 import { cn } from "@/lib/utils"
 import { VimeoEmbed } from "@/components/ui/vimeo-embed"
 import { BackgroundGradient } from "@/components/ui/background-gradient"
-import { CountUp } from "@/components/ui/count-up"
 
 /**
  * InfrastructureShowcase Component
@@ -29,8 +28,6 @@ const infrastructureItems = [
     title: "Training Academy",
     description:
       "Our purpose-built training facility ensures every team member masters the Barcelos way. Standardised operational excellence delivered through comprehensive programmes.",
-    stat: "1000+",
-    statLabel: "Staff Trained Annually",
     color: "barcelos-red",
   },
   {
@@ -38,8 +35,6 @@ const infrastructureItems = [
     title: "Central Kitchen",
     description:
       "State-of-the-art production facility where our proprietary marinades are crafted. Every blend follows recipes perfected over three decades.",
-    stat: "30+",
-    statLabel: "Years Perfected Recipes",
     color: "flame-yellow",
   },
   {
@@ -47,8 +42,6 @@ const infrastructureItems = [
     title: "Shopfitting Department",
     description:
       "Our in-house design and build-out team delivers turnkey solutions for franchisees. Consistent brand experience, every location, every time.",
-    stat: "120+",
-    statLabel: "Stores Built",
     color: "barcelos-green",
   },
   {
@@ -56,8 +49,6 @@ const infrastructureItems = [
     title: "Head Office Support",
     description:
       "Dedicated teams for marketing, operations, supply chain, and franchise development. Your success is backed by South Africa's leading QSR infrastructure.",
-    stat: "17+",
-    statLabel: "Countries Supported",
     color: "primary",
   },
 ]
@@ -127,31 +118,9 @@ export function InfrastructureShowcase({ className, videoId }: InfrastructureSho
                   <h3 className="font-display font-bold text-white text-xl md:text-2xl mb-3">
                     {item.title}
                   </h3>
-                  <p className="text-white/70 leading-relaxed mb-6">
+                  <p className="text-white/70 leading-relaxed">
                     {item.description}
                   </p>
-
-                  {/* Stat */}
-                  <div className="flex items-baseline gap-2">
-                    <span
-                      className={cn(
-                        "font-display font-bold text-3xl md:text-4xl",
-                        item.color === "barcelos-red" && "text-barcelos-red",
-                        item.color === "flame-yellow" && "text-flame-yellow",
-                        item.color === "barcelos-green" && "text-barcelos-green",
-                        item.color === "primary" && "text-primary"
-                      )}
-                    >
-                      <CountUp
-                        end={parseInt(item.stat.replace(/\D/g, ""))}
-                        suffix={item.stat.includes("+") ? "+" : ""}
-                        duration={2}
-                      />
-                    </span>
-                    <span className="text-white/60 text-sm uppercase tracking-wide">
-                      {item.statLabel}
-                    </span>
-                  </div>
                 </div>
               </div>
             </BackgroundGradient>
