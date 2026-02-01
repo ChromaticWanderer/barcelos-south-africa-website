@@ -60,6 +60,7 @@ function BentoImageCard({
   sizes,
   delay = 0,
   objectPosition = "center",
+  href,
 }: {
   src: string
   alt: string
@@ -68,17 +69,10 @@ function BentoImageCard({
   sizes: string
   delay?: number
   objectPosition?: string
+  href?: string
 }) {
-  return (
-    <motion.div
-      initial={{ opacity: 0, scale: 0.95 }}
-      animate={{ opacity: 1, scale: 1 }}
-      transition={{ duration: 0.5, delay }}
-      className={cn(
-        "relative overflow-hidden rounded-xl md:rounded-2xl group cursor-pointer",
-        className
-      )}
-    >
+  const content = (
+    <>
       <Image
         src={src}
         alt={alt}
@@ -88,8 +82,41 @@ function BentoImageCard({
         className="object-cover transition-transform duration-500 group-hover:scale-105"
         style={{ objectPosition }}
       />
-      {/* Very subtle gradient on hover only - keeps images vibrant */}
-      <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+      {/* Hover overlay with order prompt */}
+      <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-center pb-4">
+        <span className="text-white text-sm font-semibold tracking-wide flex items-center gap-1.5 bg-primary/90 px-3 py-1.5 rounded-full">
+          Order Now
+          <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+          </svg>
+        </span>
+      </div>
+    </>
+  )
+
+  return (
+    <motion.div
+      initial={{ opacity: 0, scale: 0.95 }}
+      animate={{ opacity: 1, scale: 1 }}
+      transition={{ duration: 0.5, delay }}
+      className={cn(
+        "relative overflow-hidden rounded-xl md:rounded-2xl group",
+        className
+      )}
+    >
+      {href ? (
+        <a
+          href={href}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="absolute inset-0 cursor-pointer"
+          aria-label={`Order ${alt}`}
+        >
+          {content}
+        </a>
+      ) : (
+        content
+      )}
     </motion.div>
   )
 }
@@ -142,6 +169,7 @@ export function HeroSection({
                 priority
                 sizes="50vw"
                 delay={0}
+                href={orderNowConfig.href}
               />
 
               {/* Quarter Chicken - 1x1 */}
@@ -152,6 +180,7 @@ export function HeroSection({
                 priority
                 sizes="25vw"
                 delay={0.1}
+                href={orderNowConfig.href}
               />
 
               {/* Family Pack - Tall 1x2 (large meal in tall block) */}
@@ -162,6 +191,7 @@ export function HeroSection({
                 sizes="25vw"
                 delay={0.2}
                 objectPosition="left center"
+                href={orderNowConfig.href}
               />
 
               {/* Chicken Burger - 1x1 */}
@@ -171,6 +201,7 @@ export function HeroSection({
                 className="col-span-1 row-span-1"
                 sizes="25vw"
                 delay={0.15}
+                href={orderNowConfig.href}
               />
             </div>
 
@@ -184,6 +215,7 @@ export function HeroSection({
                 priority
                 sizes="100vw"
                 delay={0}
+                href={orderNowConfig.href}
               />
 
               {/* Image 2: Chicken Burger - Half width */}
@@ -194,6 +226,7 @@ export function HeroSection({
                 priority
                 sizes="50vw"
                 delay={0.1}
+                href={orderNowConfig.href}
               />
 
               {/* Image 3: Half Pack - Half width */}
@@ -203,6 +236,7 @@ export function HeroSection({
                 className="col-span-1 aspect-square"
                 sizes="50vw"
                 delay={0.15}
+                href={orderNowConfig.href}
               />
 
               {/* Image 5: Two Chickens - Full width */}
@@ -213,6 +247,7 @@ export function HeroSection({
                 sizes="100vw"
                 delay={0.2}
                 objectPosition="center top"
+                href={orderNowConfig.href}
               />
             </div>
           </motion.div>
