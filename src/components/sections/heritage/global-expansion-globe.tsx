@@ -4,6 +4,12 @@ import React from "react";
 import { motion } from "motion/react";
 import WorldMap from "@/components/ui/world-map";
 
+/**
+ * GlobalExpansionGlobe Component - Barcelos South Africa
+ *
+ * World map visualization showing Barcelos's global expansion
+ * from South Africa to 17+ countries worldwide.
+ */
 export function GlobalExpansionGlobe() {
   return (
     <div className="relative bg-charcoal overflow-hidden">
@@ -23,13 +29,14 @@ export function GlobalExpansionGlobe() {
             GLOBAL PRESENCE
           </span>
           <h2 className="font-display font-bold text-white text-3xl md:text-4xl lg:text-5xl mb-4 uppercase">
-            From Africa to the
-            <span className="text-barcelos-red"> World</span>
+            Born in South Africa,
+            <span className="text-barcelos-red"> Loved Worldwide</span>
           </h2>
           <p className="text-lg text-white/80 leading-relaxed max-w-2xl mx-auto">
-            What began in Pretoria, South Africa has grown into a global
+            What began in Pretoria in 1993 has grown into a global
             flame-grilled family. Today, Barcelos proudly serves authentic
-            Afro-Portuguese cuisine across continents.
+            Afro-Portuguese cuisine across 17+ countries — all supported from
+            our South African headquarters.
           </p>
         </motion.div>
 
@@ -88,16 +95,37 @@ export function GlobalExpansionGlobe() {
                 start: { lat: -50.0, lng: 25.0 }, // South Africa
                 end: { lat: 49.2827, lng: -123.1207 }, // Canada (Vancouver)
               },
-              // South Africa to India
+              // South Africa to UAE
               {
                 start: { lat: -50.0, lng: 25.0 }, // South Africa
-                end: { lat: -5.0, lng: 78.9629 }, // India (dropped further)
+                end: { lat: 25.2048, lng: 55.2708 }, // UAE (Dubai)
               },
             ]}
             lineColor="#C41E3A"
           />
         </motion.div>
 
+        {/* Stats bar */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.4 }}
+          viewport={{ once: true }}
+          className="mt-12 flex flex-wrap justify-center gap-8 md:gap-16"
+        >
+          <div className="text-center">
+            <p className="font-display font-bold text-3xl md:text-4xl text-barcelos-red">17+</p>
+            <p className="text-sm text-white/60 uppercase tracking-wide">Countries</p>
+          </div>
+          <div className="text-center">
+            <p className="font-display font-bold text-3xl md:text-4xl text-flame-yellow">120+</p>
+            <p className="text-sm text-white/60 uppercase tracking-wide">Restaurants</p>
+          </div>
+          <div className="text-center">
+            <p className="font-display font-bold text-3xl md:text-4xl text-barcelos-green">1</p>
+            <p className="text-sm text-white/60 uppercase tracking-wide">Headquarters</p>
+          </div>
+        </motion.div>
       </div>
     </div>
   );

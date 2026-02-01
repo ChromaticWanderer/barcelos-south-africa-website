@@ -1,5 +1,4 @@
 import type { Metadata } from "next"
-import Link from "next/link"
 import { ArrowRight, Users, Calendar, UtensilsCrossed, CheckCircle } from "lucide-react"
 
 import { Header, Footer } from "@/components/layout"

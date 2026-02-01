@@ -2,25 +2,24 @@ import { Header, Footer } from "@/components/layout"
 import {
   HeroSection,
   WhyBarcelosSection,
-  FeaturedMenuSection,
   FranchiseCTA,
   ContactSection,
 } from "@/components/sections"
 import { FloatingNavbar } from "@/components/ui/floating-navbar"
 
 /**
- * Homepage - Barcelos India
+ * Homepage - Barcelos South Africa
  *
  * Main landing page with key sections.
  *
  * Sections:
  * - Hero: Brand introduction with Aurora effect
  * - Why Barcelos: Value propositions
- * - Featured Menu: Signature items
  * - Franchise (#franchise): Partnership opportunity
  * - Contact (#contact): Get in touch
  *
- * Our Story and Locations have dedicated pages
+ * Our Story has a dedicated page
+ * Menu/Locations handled by ServeUp (orders.barcelos.co.za)
  */
 export default function HomePage() {
   return (
@@ -34,9 +33,6 @@ export default function HomePage() {
 
         {/* Why Barcelos - Value propositions */}
         <WhyBarcelosSection />
-
-        {/* Featured Menu - Signature items showcase */}
-        <FeaturedMenuSection />
 
         {/* Franchise - Partnership opportunity (#franchise) */}
         <FranchiseCTA />

@@ -10,7 +10,6 @@ import {
   User,
   Send,
   CheckCircle,
-  Clock,
   Instagram,
   Facebook,
   Twitter,
@@ -21,7 +20,7 @@ import { PageHeader } from "@/components/shared"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Card, CardContent } from "@/components/ui/card"
-import { siteConfig, getDisplayValue, isPlaceholder } from "@/lib/constants/site"
+import { siteConfig } from "@/lib/constants/site"
 import { socialLinks } from "@/lib/constants/navigation"
 
 /**

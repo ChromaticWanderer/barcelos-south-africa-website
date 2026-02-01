@@ -18,7 +18,7 @@ const inter = Inter({
  * SEO optimized for Indian market
  */
 export const metadata: Metadata = {
-  metadataBase: new URL("https://barcelosindia.com"),
+  metadataBase: new URL("https://barcelos.co.in"),
   title: {
     default: "Barcelos India | Flame-Grilled Chicken - Portuguese Heritage",
     template: "%s | Barcelos India",
@@ -48,7 +48,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_IN",
-    url: "https://barcelosindia.com",
+    url: "https://barcelos.co.in",
     siteName: "Barcelos India",
     title: "Barcelos India | Flame-Grilled Chicken - Portuguese Heritage",
     description:

@@ -9,7 +9,7 @@ import { cn } from "@/lib/utils"
 import { Button } from "@/components/ui/button"
 
 /**
- * BrandStoryTeaser Component
+ * BrandStoryTeaser Component - Barcelos South Africa
  *
  * A visually engaging section that teases the Barcelos origin story.
  * Features:
@@ -74,15 +74,15 @@ export function BrandStoryTeaser({ className }: BrandStoryTeaserProps) {
               <p className="leading-relaxed">
                 The rooster crowed. The pilgrim was freed. And from this
                 miraculous tale, Barcelos was born - a symbol of faith, justice,
-                and authentic Portuguese spirit that now spans 12 countries
-                worldwide.
+                and authentic Portuguese spirit that now spans 17+ countries
+                worldwide, all from our South African home.
               </p>
             </div>
 
             {/* Key Facts */}
             <div className="mt-8 flex flex-wrap gap-6">
               <div>
-                <p className="text-2xl font-bold text-charcoal">12+</p>
+                <p className="text-2xl font-bold text-charcoal">17+</p>
                 <p className="text-sm text-charcoal-light">Countries</p>
               </div>
               <div className="w-px bg-neutral-200" />

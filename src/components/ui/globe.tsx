@@ -1,7 +1,7 @@
 "use client";
 
 import * as THREE from "three";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useMemo } from "react";
 import ThreeGlobe from "three-globe";
 
 export type Position = {
@@ -76,12 +76,14 @@ export function World({
   const rendererRef = useRef<THREE.WebGLRenderer | null>(null);
   const sceneRef = useRef<THREE.Scene | null>(null);
   const cameraRef = useRef<THREE.PerspectiveCamera | null>(null);
-  const [isInitialized, setIsInitialized] = useState(false);
+  const isInitializedRef = useRef(false);
 
-  const config = { ...defaultGlobeConfig, ...globeConfig };
+  const config = useMemo(() => ({ ...defaultGlobeConfig, ...globeConfig }), [globeConfig]);
 
   useEffect(() => {
-    if (!containerRef.current || isInitialized) return;
+    if (!containerRef.current || isInitializedRef.current) return;
+
+    const container = containerRef.current;
 
     // Initialize scene
     const scene = new THREE.Scene();
@@ -90,7 +92,7 @@ export function World({
     // Initialize camera
     const camera = new THREE.PerspectiveCamera(
       50,
-      containerRef.current.clientWidth / containerRef.current.clientHeight,
+      container.clientWidth / container.clientHeight,
       0.1,
       1000
     );
@@ -103,11 +105,11 @@ export function World({
       alpha: true,
     });
     renderer.setSize(
-      containerRef.current.clientWidth,
-      containerRef.current.clientHeight
+      container.clientWidth,
+      container.clientHeight
     );
     renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
-    containerRef.current.appendChild(renderer.domElement);
+    container.appendChild(renderer.domElement);
     rendererRef.current = renderer;
 
     // Initialize globe
@@ -166,20 +168,20 @@ export function World({
       globe.rotation.x = (config.initialPosition.lat * Math.PI) / 180;
     }
 
-    setIsInitialized(true);
+    isInitializedRef.current = true;
 
     // Cleanup
     return () => {
-      if (rendererRef.current && containerRef.current) {
-        containerRef.current.removeChild(rendererRef.current.domElement);
+      if (rendererRef.current && container) {
+        container.removeChild(rendererRef.current.domElement);
         rendererRef.current.dispose();
       }
     };
-  }, [isInitialized, config]);
+  }, [config]);
 
   // Update arcs when data changes
   useEffect(() => {
-    if (!globeRef.current || !isInitialized) return;
+    if (!globeRef.current || !isInitializedRef.current) return;
 
     const globe = globeRef.current;
 
@@ -209,11 +211,11 @@ export function World({
       .ringPropagationSpeed("propagationSpeed")
       .ringRepeatPeriod("repeatPeriod");
 
-  }, [data, isInitialized, config]);
+  }, [data, config]);
 
   // Animation loop
   useEffect(() => {
-    if (!isInitialized || !rendererRef.current || !sceneRef.current || !cameraRef.current) return;
+    if (!isInitializedRef.current || !rendererRef.current || !sceneRef.current || !cameraRef.current) return;
 
     let animationId: number;
 
@@ -232,7 +234,7 @@ export function World({
     return () => {
       cancelAnimationFrame(animationId);
     };
-  }, [isInitialized, config.autoRotate, config.autoRotateSpeed]);
+  }, [config.autoRotate, config.autoRotateSpeed]);
 
   // Handle resize
   useEffect(() => {
@@ -254,7 +256,7 @@ export function World({
     return () => {
       window.removeEventListener("resize", handleResize);
     };
-  }, [isInitialized]);
+  }, []);
 
   return (
     <div

@@ -268,10 +268,13 @@ export function getUserLocation(): Promise<StoreCoordinates | null> {
 }
 
 // Type declarations for Google Maps (basic)
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+type GoogleMapsType = any;
+
 declare global {
   interface Window {
     google?: {
-      maps?: any;
+      maps?: GoogleMapsType;
     };
   }
 }

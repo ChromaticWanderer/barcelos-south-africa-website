@@ -1,8 +1,6 @@
 // Homepage Sections
 export { HeroSection, AuroraBackground } from "./hero"
 export { WhyBarcelosSection } from "./why-barcelos"
-export { FeaturedMenuSection, MenuCard } from "./featured-menu"
-export { LocationFinderSection } from "./location-finder"
 export { TestimonialsSection } from "./testimonials"
 export { BrandStoryTeaser } from "./brand-story"
 export { FranchiseCTA, FooterCTA } from "./cta"

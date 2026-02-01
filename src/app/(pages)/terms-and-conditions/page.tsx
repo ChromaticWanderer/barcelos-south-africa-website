@@ -3,9 +3,9 @@ import { Header, Footer } from "@/components/layout"
 import { PageHeader } from "@/components/shared"
 
 export const metadata: Metadata = {
-  title: "Terms and Conditions | Barcelos India",
+  title: "Terms and Conditions | Barcelos South Africa",
   description:
-    "Read the terms and conditions governing your use of the Barcelos India website and services.",
+    "Read the terms and conditions governing your use of the Barcelos South Africa website and services.",
 }
 
 export default function TermsAndConditionsPage() {
@@ -22,50 +22,35 @@ export default function TermsAndConditionsPage() {
           <div className="container-wide max-w-4xl">
             <div className="prose prose-lg max-w-none">
               <p className="text-sm text-charcoal-light mb-8">
-                Last Updated: 18/12/2025
+                Last Updated: February 2026
               </p>
 
               <h2 className="text-2xl font-bold text-charcoal mt-8 mb-4">
-                1. Introduction
-              </h2>
-              <p className="text-charcoal-medium mb-6">
-                Welcome to the Barcelos India website. These Terms and
-                Conditions ("Terms") govern your use of our website and digital
-                services. By accessing or using this website, you agree to be
-                bound by these Terms. If you do not agree with any part of these
-                Terms, you must not use our services.
-              </p>
-
-              <h2 className="text-2xl font-bold text-charcoal mt-8 mb-4">
-                2. Operating Entities
+                1. Introduction and Acceptance
               </h2>
               <p className="text-charcoal-medium mb-4">
-                This website is operated specifically for the Indian market
-                through a partnership between:
+                Welcome to the Barcelos South Africa website. These Terms and
+                Conditions (&ldquo;Terms&rdquo;) govern your use of our website and digital
+                services. By accessing or using this website, you agree to be
+                bound by these Terms.
               </p>
-              <div className="bg-neutral-50 p-6 rounded-lg mb-6">
-                <p className="text-charcoal-medium">
-                  <strong>The Brand Owner:</strong> Merlot Investments Limited
-                  (Mauritius), owner of the "Barcelos" trademark and
-                  intellectual property.
-                </p>
-                <p className="text-charcoal-medium mt-3">
-                  <strong>The Local Operator:</strong> Masala Country Hospitality
-                  LLP (India), responsible for daily operations, order
-                  fulfillment, and management of Barcelos outlets in India.
-                </p>
-              </div>
+              <p className="text-charcoal-medium mb-6">
+                If you do not agree with any amendments to these Terms and
+                Conditions, you may no longer access the site. We reserve the
+                right to amend these terms at any time, with notice published on
+                our website.
+              </p>
 
               <h2 className="text-2xl font-bold text-charcoal mt-8 mb-4">
-                3. Intellectual Property Rights
+                2. Intellectual Property Rights
               </h2>
               <ul className="list-disc pl-6 mb-6 text-charcoal-medium space-y-3">
                 <li>
                   <strong>Ownership:</strong> All content on this website,
                   including but not limited to text, graphics, logos, images,
-                  digital downloads, and software, is the property of Merlot
-                  Investments Limited or its content suppliers and is protected
-                  by international copyright and trademark laws.
+                  digital downloads, and software, is the property of Barcelos
+                  or its content suppliers and is protected by South African and
+                  international copyright and trademark laws.
                 </li>
                 <li>
                   <strong>License:</strong> You are granted a limited license to
@@ -74,21 +59,35 @@ export default function TermsAndConditionsPage() {
                   portion of it without express written consent from us.
                 </li>
                 <li>
-                  <strong>Trademarks:</strong> "Barcelos," "Barcelos Flame
-                  Grilled Chicken," and related logos are registered trademarks
-                  of Merlot Investments Limited. They may not be used in
-                  connection with any product or service that is not ours in any
-                  manner that is likely to cause confusion among customers.
+                  <strong>Trademarks:</strong> &ldquo;Barcelos,&rdquo; &ldquo;Barcelos Flame
+                  Grilled Chicken,&rdquo; and related logos are registered trademarks.
+                  They may not be used in connection with any product or service
+                  that is not ours in any manner that is likely to cause
+                  confusion among customers.
+                </li>
+                <li>
+                  <strong>User Content:</strong> When you post content on our
+                  platforms, you grant us an irrevocable, non-exclusive,
+                  royalty-free license to use, reproduce, modify, and distribute
+                  that content for business purposes.
                 </li>
               </ul>
 
               <h2 className="text-2xl font-bold text-charcoal mt-8 mb-4">
-                4. Use of Services
+                3. User Responsibilities
               </h2>
               <p className="text-charcoal-medium mb-4">
                 <strong>Accuracy:</strong> You agree to provide accurate,
                 current, and complete information when making reservations,
-                ordering food, or signing up for newsletters.
+                ordering food, submitting franchise inquiries, or signing up for
+                communications.
+              </p>
+              <p className="text-charcoal-medium mb-4">
+                <strong>Account Security:</strong> If you create an account, you
+                are responsible for maintaining the confidentiality of your
+                password and account information. You warrant that all orders
+                placed with your account are made by you or with your express
+                consent.
               </p>
               <p className="text-charcoal-medium mb-4">
                 <strong>Prohibited Conduct:</strong> You agree not to use the
@@ -98,10 +97,42 @@ export default function TermsAndConditionsPage() {
                 <li>Submitting false or misleading information.</li>
                 <li>
                   Attempting to hack, destabilize, or gain unauthorized access
-                  to our website, servers (including Google Sheets/Make.com
-                  integrations), or data.
+                  to our website, servers, or data.
                 </li>
                 <li>Harassing or abusing our staff or other users.</li>
+                <li>
+                  Using automated systems to scrape or extract data from the
+                  website.
+                </li>
+              </ul>
+
+              <h2 className="text-2xl font-bold text-charcoal mt-8 mb-4">
+                4. Online Ordering
+              </h2>
+              <p className="text-charcoal-medium mb-4">
+                Online ordering is provided through our partner platform,
+                ServeUp. When placing orders:
+              </p>
+              <ul className="list-disc pl-6 mb-6 text-charcoal-medium space-y-3">
+                <li>
+                  <strong>Order Confirmation:</strong> Once you have placed your
+                  order and your payment has been authorised, you will not be
+                  able to cancel your order.
+                </li>
+                <li>
+                  <strong>Pricing:</strong> Prices listed are in South African
+                  Rand (ZAR) and may exclude delivery fees. Prices are subject
+                  to change without notice.
+                </li>
+                <li>
+                  <strong>Payment:</strong> Payment card data is not stored
+                  locally but is transmitted encrypted to our payment providers.
+                </li>
+                <li>
+                  <strong>Delivery:</strong> Delivery times are estimates and
+                  may vary based on location and demand. We are not liable for
+                  delays beyond our reasonable control.
+                </li>
               </ul>
 
               <h2 className="text-2xl font-bold text-charcoal mt-8 mb-4">
@@ -114,17 +145,16 @@ export default function TermsAndConditionsPage() {
                   any item at any time.
                 </li>
                 <li>
-                  <strong>Pricing:</strong> Prices listed on the website are in
-                  Indian Rupees (INR) and are subject to change without notice.
-                  While we strive for accuracy, errors may occur; in the event
-                  of a pricing error, we reserve the right to cancel orders
-                  placed at the incorrect price.
+                  <strong>Pricing Errors:</strong> While we strive for accuracy,
+                  errors may occur. In the event of a pricing error, we reserve
+                  the right to cancel orders placed at the incorrect price.
                 </li>
                 <li>
                   <strong>Allergens:</strong> While we attempt to provide
                   accurate information regarding ingredients, we cannot
                   guarantee that any product is 100% free from allergens due to
-                  the risk of cross-contamination in our kitchens.
+                  the risk of cross-contamination in our kitchens. Please inform
+                  us of any allergies when ordering.
                 </li>
               </ul>
 
@@ -133,50 +163,74 @@ export default function TermsAndConditionsPage() {
               </h2>
               <ul className="list-disc pl-6 mb-6 text-charcoal-medium space-y-3">
                 <li>
-                  <strong>"As Is" Basis:</strong> This website and our services
-                  are provided on an "as is" and "as available" basis.
+                  <strong>&ldquo;As Is&rdquo; Basis:</strong> Your use of and reliance on
+                  the website is entirely at your own risk. The website and our
+                  services are provided on an &ldquo;as is&rdquo; and &ldquo;as available&rdquo; basis.
                 </li>
                 <li>
-                  <strong>No Warranty:</strong> Neither Merlot Investments
-                  Limited nor Masala Country Hospitality LLP warrants that the
-                  website will be uninterrupted, error-free, or free of viruses.
+                  <strong>No Warranty:</strong> Barcelos does not warrant that
+                  the website will be uninterrupted, error-free, or free of
+                  viruses or other harmful components.
                 </li>
                 <li>
                   <strong>Liability Cap:</strong> To the fullest extent
-                  permitted by law, our liability for any claim arising out of
-                  your use of the website or services is limited to the amount
-                  you paid us for the specific transaction giving rise to the
-                  claim. We shall not be liable for indirect, incidental, or
-                  consequential damages.
+                  permitted by South African law, our liability for any claim
+                  arising out of your use of the website or services is limited
+                  to the amount you paid us for the specific transaction giving
+                  rise to the claim. We shall not be liable for indirect,
+                  incidental, or consequential damages.
                 </li>
               </ul>
 
               <h2 className="text-2xl font-bold text-charcoal mt-8 mb-4">
-                7. Third-Party Links
+                7. Third-Party Links and Services
               </h2>
               <p className="text-charcoal-medium mb-6">
                 Our website may contain links to third-party websites or
-                services (e.g., delivery aggregators like Zomato/Swiggy or
-                social media platforms). We are not responsible for the content
-                or privacy practices of these third-party sites.
+                services, including our ordering partner ServeUp and social
+                media platforms. We are not responsible for the content,
+                privacy practices, or terms of service of these third-party
+                sites. Your use of third-party services is at your own risk.
               </p>
 
               <h2 className="text-2xl font-bold text-charcoal mt-8 mb-4">
-                8. Governing Law and Jurisdiction
+                8. Privacy and Data Protection
+              </h2>
+              <p className="text-charcoal-medium mb-6">
+                Your use of this website is also governed by our Privacy Policy,
+                which explains how we collect, use, and protect your personal
+                information in compliance with the Protection of Personal
+                Information Act (POPIA). Location data and analytics may be used
+                to improve our services but are not stored indefinitely.
+              </p>
+
+              <h2 className="text-2xl font-bold text-charcoal mt-8 mb-4">
+                9. Franchise Inquiries
+              </h2>
+              <p className="text-charcoal-medium mb-6">
+                Information provided through our franchise inquiry form is used
+                solely for the purpose of evaluating potential franchise
+                opportunities. By submitting an inquiry, you consent to being
+                contacted by our franchise development team. All franchise
+                discussions are subject to separate franchise agreements.
+              </p>
+
+              <h2 className="text-2xl font-bold text-charcoal mt-8 mb-4">
+                10. Governing Law and Jurisdiction
               </h2>
               <p className="text-charcoal-medium mb-4">
                 These Terms shall be governed by and construed in accordance
-                with the laws of India.
+                with the laws of the Republic of South Africa.
               </p>
               <p className="text-charcoal-medium mb-6">
                 <strong>Dispute Resolution:</strong> Any dispute arising out of
                 or in connection with these Terms shall be subject to the
-                exclusive jurisdiction of the courts located in Faridabad,
-                Haryana.
+                exclusive jurisdiction of the courts of the Republic of South
+                Africa.
               </p>
 
               <h2 className="text-2xl font-bold text-charcoal mt-8 mb-4">
-                9. Changes to Terms
+                11. Changes to Terms
               </h2>
               <p className="text-charcoal-medium mb-6">
                 We reserve the right to modify these Terms at any time. Any
@@ -186,7 +240,7 @@ export default function TermsAndConditionsPage() {
               </p>
 
               <h2 className="text-2xl font-bold text-charcoal mt-8 mb-4">
-                10. Contact Us
+                12. Contact Us
               </h2>
               <p className="text-charcoal-medium mb-4">
                 If you have any questions regarding these Terms, please contact
@@ -194,11 +248,13 @@ export default function TermsAndConditionsPage() {
               </p>
               <div className="bg-neutral-50 p-6 rounded-lg">
                 <p className="text-charcoal-medium">
-                  <strong>Email:</strong> barcelos.india@barcelos.com
+                  <strong>Barcelos Head Office</strong>
                   <br />
-                  <strong>Address:</strong> Masala Country Hospitality LLP,
-                  405B, Pinnacle Business Tower, Shooting Range Road, Suraj
-                  Kund, Faridabad, Haryana 121009, India.
+                  <strong>Phone:</strong> +27 12 6600 450
+                  <br />
+                  <strong>Email:</strong> customer@barcelos.co.za
+                  <br />
+                  <strong>Website:</strong> www.barcelos.co.za
                 </p>
               </div>
             </div>

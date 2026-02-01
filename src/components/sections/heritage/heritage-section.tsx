@@ -7,19 +7,21 @@ import { Flame, Heart, Globe2, Award, Users, Sparkles } from "lucide-react"
 import { cn } from "@/lib/utils"
 import { TextGenerateEffect } from "@/components/ui/text-generate-effect"
 import { GlobalExpansionGlobe } from "./global-expansion-globe"
+import { InfrastructureShowcase } from "./infrastructure-showcase"
 
 /**
- * HeritageSection Component
+ * HeritageSection Component - Barcelos South Africa
  *
- * Comprehensive heritage/story section for the single-page homepage.
- * Features:
+ * Comprehensive heritage/story section featuring:
  * - Hero banner with rooster imagery
  * - The Legend of the Barcelos Rooster (full story)
- * - Humble origins in South Africa
- * - Family vision and flame-grilled passion
+ * - Costa Mazzis founder story (he's still active in SA)
+ * - Infrastructure showcase (training, central kitchen, shopfitting)
  * - Global expansion journey
- * - Key values
+ * - Core values
  * - Timeline with milestones
+ *
+ * NOTE: No Jared/family handover narrative - SA is the home base
  */
 
 interface HeritageSectionProps {
@@ -30,17 +32,17 @@ const values = [
   {
     icon: Flame,
     title: "Flame-Grilled Excellence",
-    description: "Authentic Portuguese peri-peri recipes perfected over a century",
+    description: "Authentic Portuguese peri-peri recipes perfected over three decades",
   },
   {
     icon: Heart,
-    title: "Family Heritage",
-    description: "From the Mazzis family to yours since 1993",
+    title: "South African Leadership",
+    description: "Led by an experienced team dedicated to quality since 1993",
   },
   {
     icon: Globe2,
     title: "Global Family",
-    description: "120+ restaurants across 17 countries",
+    description: "120+ restaurants across 17 countries, born right here in SA",
   },
   {
     icon: Award,
@@ -61,10 +63,10 @@ const values = [
 
 const milestones = [
   { year: "1993", event: "Costa Mazzis opens the first Barcelos in Pretoria, South Africa", highlight: true },
-  { year: "Late 90s", event: "Franchising begins, spreading across Southern Africa" },
-  { year: "2000s", event: "Expansion to Europe, Asia, and North America" },
-  { year: "2010s", event: "Global presence reaches 100+ restaurants" },
-  { year: "Today", event: "120+ restaurants in 17+ countries, now in India", highlight: true },
+  { year: "Late 90s", event: "Franchising begins, expanding across Southern Africa" },
+  { year: "2000s", event: "International expansion to Europe, Asia, and North America" },
+  { year: "2010s", event: "Training Academy and Central Kitchen established" },
+  { year: "Today", event: "120+ restaurants in 17+ countries, headquartered in South Africa", highlight: true },
 ]
 
 export function HeritageSection({ className }: HeritageSectionProps) {
@@ -96,8 +98,8 @@ export function HeritageSection({ className }: HeritageSectionProps) {
               <span className="text-barcelos-red"> to Legacy</span>
             </h1>
             <p className="text-xl text-neutral-300 leading-relaxed">
-              A story of faith, family, and flame-grilled passion that spans continents
-              and generations.
+              A story of faith, flavour, and flame-grilled passion that began in South Africa
+              and now spans continents.
             </p>
           </div>
         </div>
@@ -169,7 +171,7 @@ export function HeritageSection({ className }: HeritageSectionProps) {
         </div>
       </div>
 
-      {/* Humble Beginnings Section */}
+      {/* Humble Beginnings Section - Costa Mazzis */}
       <div className="section-padding bg-white">
         <div className="container-wide">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
@@ -254,109 +256,8 @@ export function HeritageSection({ className }: HeritageSectionProps) {
         </div>
       </div>
 
-      {/* Family Vision Section */}
-      <div className="section-padding bg-charcoal text-white">
-        <div className="container-wide">
-          {/* First row - Handover image and text */}
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center mb-16">
-            {/* Handover Image - Costa & Jared */}
-            <div className="relative order-2 lg:order-1">
-              <div className="relative aspect-[4/3] max-w-lg mx-auto">
-                <div className="absolute inset-0 bg-barcelos-red/10 rounded-3xl rotate-2" />
-                <div className="absolute inset-0 bg-flame-yellow/10 rounded-3xl -rotate-2" />
-                <div className="relative h-full rounded-3xl overflow-hidden shadow-2xl">
-                  <Image
-                    src="/images/brand/costa-jared-handover.png"
-                    alt="Costa Mazzis passing the torch to Jared Mazzis - the next generation of Barcelos"
-                    fill
-                    className="object-cover"
-                  />
-                </div>
-              </div>
-            </div>
-
-            {/* Text content */}
-            <div className="order-1 lg:order-2">
-              <span className="inline-block px-4 py-1.5 mb-6 text-sm font-semibold text-flame-yellow bg-flame-yellow/10 rounded-full uppercase tracking-wide">
-                FAMILY VISION
-              </span>
-              <h2 className="font-display font-bold text-white text-3xl md:text-4xl mb-6 uppercase">
-                Flame-Grilled Passion,
-                <span className="text-flame-yellow"> Passed Down</span>
-              </h2>
-
-              <div className="space-y-4">
-                <p className="text-lg leading-relaxed text-white" style={{ color: '#ffffff' }}>
-                  Costa&apos;s vision for Barcelos was always about more than selling chicken &mdash;
-                  it was about sharing an experience and a culture. The flame-grilled peri-peri
-                  recipes themselves are steeped in history, perfected by Portuguese chefs over
-                  a century ago.
-                </p>
-
-                <p className="leading-relaxed text-white" style={{ color: '#ffffff' }}>
-                  The result was a menu that brought South African hospitality together with
-                  Portuguese spice, creating a signature taste that people couldn&apos;t get enough of.
-                  The exact blend of peri-peri sauces and spices became a closely guarded family secret.
-                </p>
-
-                <p className="leading-relaxed text-white" style={{ color: '#ffffff' }}>
-                  Today, Costa remains a guiding force in the business, alongside the next
-                  generation &mdash; his son Jared Mazzis &mdash;
-                  who continues to drive Barcelos into its future, honouring the
-                  heritage while bringing fresh energy, innovation, and strategic thinking to
-                  meet the demands of a rapidly changing global market.
-                </p>
-              </div>
-            </div>
-          </div>
-
-          {/* Second row - Stats and Jared India image */}
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-            {/* Stats cards */}
-            <div className="relative">
-              <div className="grid grid-cols-2 gap-4">
-                <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 text-center">
-                  <p className="font-display font-bold text-4xl md:text-5xl text-barcelos-red mb-2">30+</p>
-                  <p className="text-sm text-neutral-400">Years of Excellence</p>
-                </div>
-                <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 text-center">
-                  <p className="font-display font-bold text-4xl md:text-5xl text-flame-yellow mb-2">17+</p>
-                  <p className="text-sm text-neutral-400">Countries</p>
-                </div>
-                <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 text-center">
-                  <p className="font-display font-bold text-4xl md:text-5xl text-barcelos-green mb-2">120+</p>
-                  <p className="text-sm text-neutral-400">Restaurants</p>
-                </div>
-                <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 text-center">
-                  <p className="font-display font-bold text-4xl md:text-5xl text-white mb-2">1</p>
-                  <p className="text-sm text-neutral-400">Family Recipe</p>
-                </div>
-              </div>
-            </div>
-
-            {/* Jared India Franchise Image */}
-            <div className="relative">
-              <div className="relative aspect-[4/3] max-w-lg mx-auto lg:ml-auto">
-                <div className="absolute inset-0 bg-flame-yellow/10 rounded-3xl rotate-2" />
-                <div className="absolute inset-0 bg-barcelos-red/10 rounded-3xl -rotate-2" />
-                <div className="relative h-full rounded-3xl overflow-hidden shadow-2xl">
-                  <Image
-                    src="/images/brand/jared-mazzis-india.jpg"
-                    alt="Jared Mazzis leading Barcelos expansion into India"
-                    fill
-                    className="object-cover object-right"
-                  />
-                </div>
-                {/* Caption badge */}
-                <div className="absolute -bottom-3 -left-3 md:bottom-4 md:-left-4 bg-barcelos-red text-white rounded-2xl shadow-xl px-4 py-3">
-                  <p className="text-xs font-medium opacity-80">Expanding to</p>
-                  <p className="font-display font-bold text-xl">India</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+      {/* Infrastructure Showcase - Replaces Family Vision Section */}
+      <InfrastructureShowcase />
 
       {/* Global Expansion Globe */}
       <GlobalExpansionGlobe />
@@ -373,7 +274,7 @@ export function HeritageSection({ className }: HeritageSectionProps) {
             </h2>
             <p className="text-lg text-charcoal-medium max-w-2xl mx-auto">
               What began as one neighbourhood restaurant in Pretoria has grown into a
-              thriving enterprise spanning continents.
+              thriving enterprise spanning continents — all headquartered right here in South Africa.
             </p>
           </div>
 
@@ -489,9 +390,9 @@ export function HeritageSection({ className }: HeritageSectionProps) {
             </h2>
             <p className="text-lg text-white/90 leading-relaxed">
               What started with Costa Mazzis grilling for his first customers in Pretoria
-              has grown into a global culinary family. Barcelos remains committed to
-              flame-grilling with integrity, serving food that is true to its heritage,
-              and treating customers like part of the family.
+              has grown into a global culinary family. From our headquarters here in South Africa,
+              Barcelos remains committed to flame-grilling with integrity, serving food that is
+              true to its heritage, and treating customers like part of the family.
             </p>
             <p
               className="mt-6 text-xl font-medium"

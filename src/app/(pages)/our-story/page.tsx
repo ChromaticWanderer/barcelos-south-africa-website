@@ -11,11 +11,11 @@ export const metadata: Metadata = {
     "Barcelos story",
     "Barcelos history",
     "Costa Mazzis",
-    "Jared Mazzis",
     "Portuguese chicken history",
     "Barcelos rooster legend",
     "flame-grilled chicken heritage",
     "peri-peri origins",
+    "South African franchise",
   ],
   openGraph: {
     title: "Our Story | The Barcelos Heritage",
@@ -26,12 +26,12 @@ export const metadata: Metadata = {
 }
 
 /**
- * Our Story Page - Barcelos India
+ * Our Story Page - Barcelos South Africa
  *
  * Full heritage/story page featuring:
  * - The Legend of the Barcelos Rooster
  * - Costa Mazzis and the founding story
- * - Family heritage and values
+ * - Infrastructure showcase (training, central kitchen, shopfitting)
  * - Global expansion journey
  * - Timeline of milestones
  *

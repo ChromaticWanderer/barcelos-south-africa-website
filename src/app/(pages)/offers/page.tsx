@@ -1,6 +1,5 @@
 "use client"
 
-import Link from "next/link"
 import { ExternalLink, Tag, Calendar, Copy } from "lucide-react"
 
 import { Header, Footer } from "@/components/layout"
@@ -10,7 +9,7 @@ import { Card, CardContent } from "@/components/ui/card"
 import { orderNowConfig } from "@/lib/constants/navigation"
 
 /**
- * Offers Page - Barcelos India
+ * Offers Page - Barcelos South Africa
  *
  * Current promotions and deals page with:
  * - Active offers
@@ -40,33 +39,24 @@ export default function OffersPage() {
                       Featured Offer
                     </div>
                     <h2 className="font-display font-bold text-2xl md:text-3xl text-white mb-4 uppercase">
-                      GRAND OPENING SPECIAL
+                      FLAME-GRILLED SPECIALS
                     </h2>
                     <p className="text-white/90 mb-6">
-                      Exciting offers coming soon as we launch Barcelos India.
-                      Stay tuned for exclusive deals!
+                      Discover our latest deals on flame-grilled favourites.
+                      Order online for exclusive offers!
                     </p>
-                    {orderNowConfig.comingSoon ? (
-                      <div
-                        className="h-12 inline-flex items-center justify-center bg-white/60 text-primary/60 font-semibold px-8 py-3 rounded-full cursor-not-allowed"
-                        aria-label="Online ordering coming soon"
-                      >
-                        {orderNowConfig.comingSoonLabel}
-                      </div>
-                    ) : (
-                      <MovingBorderButton
-                        as="a"
-                        href={orderNowConfig.href}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        borderRadius="1.75rem"
-                        className="bg-white text-primary font-semibold px-8 py-3"
-                        containerClassName="h-12 inline-block"
-                      >
-                        Order Now
-                        <ExternalLink className="size-5 ml-2" />
-                      </MovingBorderButton>
-                    )}
+                    <MovingBorderButton
+                      as="a"
+                      href={orderNowConfig.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      borderRadius="1.75rem"
+                      className="bg-white text-primary font-semibold px-8 py-3"
+                      containerClassName="h-12 inline-block"
+                    >
+                      Order Now
+                      <ExternalLink className="size-5 ml-2" />
+                    </MovingBorderButton>
                   </div>
                 </div>
               </Card>
@@ -86,7 +76,7 @@ export default function OffersPage() {
                     <div className="flex items-center gap-2">
                       <Tag className="size-4 text-primary" />
                       <span className="text-sm font-semibold text-primary">
-                        Coming Soon
+                        Special Offer
                       </span>
                     </div>
 
@@ -104,7 +94,7 @@ export default function OffersPage() {
                     {/* Validity Placeholder */}
                     <div className="flex items-center gap-2 text-sm text-charcoal-light">
                       <Calendar className="size-4" />
-                      <span>Validity: TBA</span>
+                      <span>Validity: See in-store</span>
                     </div>
 
                     {/* Code Placeholder */}
@@ -118,27 +108,18 @@ export default function OffersPage() {
                     </div>
 
                     {/* CTA */}
-                    {orderNowConfig.comingSoon ? (
-                      <div
-                        className="h-10 w-full flex items-center justify-center bg-muted text-charcoal/50 font-semibold px-4 py-2 text-sm rounded-full cursor-not-allowed"
-                        aria-label="Online ordering coming soon"
-                      >
-                        {orderNowConfig.comingSoonLabel}
-                      </div>
-                    ) : (
-                      <MovingBorderButton
-                        as="a"
-                        href={orderNowConfig.href}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        borderRadius="1.5rem"
-                        className="bg-white text-charcoal font-semibold px-4 py-2 text-sm"
-                        containerClassName="h-10 w-full"
-                      >
-                        Order Now
-                        <ExternalLink className="size-4 ml-2" />
-                      </MovingBorderButton>
-                    )}
+                    <MovingBorderButton
+                      as="a"
+                      href={orderNowConfig.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      borderRadius="1.5rem"
+                      className="bg-white text-charcoal font-semibold px-4 py-2 text-sm"
+                      containerClassName="h-10 w-full"
+                    >
+                      Order Now
+                      <ExternalLink className="size-4 ml-2" />
+                    </MovingBorderButton>
                   </CardContent>
                 </Card>
               ))}
@@ -153,7 +134,7 @@ export default function OffersPage() {
                 <li>* Offers valid at participating outlets only</li>
                 <li>* Cannot be combined with other promotions</li>
                 <li>* Terms and conditions apply to all offers</li>
-                <li>* Barcelos India reserves the right to modify or cancel offers</li>
+                <li>* Barcelos South Africa reserves the right to modify or cancel offers</li>
               </ul>
             </div>
           </div>

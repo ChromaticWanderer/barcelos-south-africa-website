@@ -1,8 +1,7 @@
 "use client"
 
 import * as React from "react"
-import { useState, useEffect } from "react"
-import Link from "next/link"
+import { useState } from "react"
 import Image from "next/image"
 import {
   ArrowRight,
@@ -14,33 +13,33 @@ import {
   Phone,
   MapPin,
   Globe2,
-  Award,
   CheckCircle,
-  Flame,
-  Heart,
-  DollarSign,
   GraduationCap,
   Megaphone,
   Wrench,
+  Factory,
 } from "lucide-react"
 
 import { Header, Footer } from "@/components/layout"
-import { PageHeader } from "@/components/shared"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Card, CardContent } from "@/components/ui/card"
+import { Button as MovingBorderButton } from "@/components/ui/moving-border"
+import { BackgroundGradient } from "@/components/ui/background-gradient"
+import { Turnstile, useTurnstileToken } from "@/components/ui/turnstile"
 import { siteConfig } from "@/lib/constants/site"
 
 /**
- * Franchise Page - Barcelos India
+ * Franchise Page - Barcelos South Africa
  *
  * Comprehensive franchise information page with:
  * - Hero section with brand story
  * - Why partner with Barcelos
- * - Franchise model details
+ * - Infrastructure showcase
+ * - Investment ranges (hybrid model - show ranges, hold back specifics)
  * - Support offered
- * - Investment information
- * - Inquiry form
+ * - Inquiry form with SA provinces + International option
+ * - Cloudflare Turnstile bot protection
  */
 
 const benefits = [
@@ -51,36 +50,61 @@ const benefits = [
   },
   {
     icon: TrendingUp,
-    title: "GROWING MARKET",
-    description: "Premium QSR segment expanding rapidly in India with strong consumer demand for quality flame-grilled options.",
+    title: "SA HEADQUARTERS",
+    description: "Full support from our South African head office, including training academy and central kitchen.",
   },
   {
     icon: Users,
-    title: "FULL SUPPORT",
-    description: "Comprehensive training, marketing resources, and ongoing operational guidance from day one.",
+    title: "COMPLETE SUPPORT",
+    description: "Comprehensive training, marketing resources, shopfitting, and ongoing operational guidance.",
   },
 ]
 
-const supportItems = [
+const infrastructureItems = [
   {
     icon: GraduationCap,
-    title: "Training & Development",
-    description: "Complete training program for you and your team covering operations, service, and brand standards.",
+    title: "Training Academy",
+    description: "Purpose-built facility ensuring every team member masters the Barcelos way.",
+    color: "barcelos-red",
+  },
+  {
+    icon: Factory,
+    title: "Central Kitchen",
+    description: "State-of-the-art production of proprietary marinades and signature sauces.",
+    color: "flame-yellow",
+  },
+  {
+    icon: Wrench,
+    title: "Shopfitting Team",
+    description: "In-house design and build-out team for turnkey store solutions.",
+    color: "barcelos-green",
   },
   {
     icon: Megaphone,
     title: "Marketing Support",
-    description: "National and local marketing campaigns, social media support, and promotional materials.",
+    description: "National campaigns, local marketing assistance, and brand materials.",
+    color: "primary",
+  },
+]
+
+const investmentRanges = [
+  {
+    format: "Express",
+    description: "Compact format for high-traffic locations",
+    range: "R1.5M - R2M",
+    size: "40-60m²",
   },
   {
-    icon: Wrench,
-    title: "Operations Excellence",
-    description: "Ongoing operational support, quality audits, and continuous improvement programs.",
+    format: "Standard",
+    description: "Full-service restaurant with dine-in",
+    range: "R2M - R2.5M",
+    size: "80-120m²",
   },
   {
-    icon: DollarSign,
-    title: "Financial Guidance",
-    description: "Business planning support, benchmarking data, and financial performance insights.",
+    format: "Flagship",
+    description: "Premium location with full brand experience",
+    range: "R2.5M - R3M+",
+    size: "120-180m²",
   },
 ]
 
@@ -100,33 +124,68 @@ const stats = [
   { value: "1993", label: "Est." },
 ]
 
+// South African provinces + International option
+const regionOptions = [
+  { value: "", label: "Select your region" },
+  { value: "gauteng", label: "Gauteng" },
+  { value: "western-cape", label: "Western Cape" },
+  { value: "kwazulu-natal", label: "KwaZulu-Natal" },
+  { value: "eastern-cape", label: "Eastern Cape" },
+  { value: "free-state", label: "Free State" },
+  { value: "limpopo", label: "Limpopo" },
+  { value: "mpumalanga", label: "Mpumalanga" },
+  { value: "north-west", label: "North West" },
+  { value: "northern-cape", label: "Northern Cape" },
+  { value: "international", label: "International (Outside SA)" },
+]
+
 export default function FranchisePage() {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
     phone: "",
-    city: "",
+    region: "",
+    country: "",
     investment: "",
     experience: "",
     message: "",
   })
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [isSubmitted, setIsSubmitted] = useState(false)
+  const [submitError, setSubmitError] = useState<string | null>(null)
+
+  const { token, handleVerify, handleError, handleExpire, reset: resetTurnstile } = useTurnstileToken()
+
+  const isInternational = formData.region === "international"
 
   function handleChange(
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>
   ) {
-    setFormData((prev) => ({ ...prev, [e.target.name]: e.target.value }))
+    const { name, value } = e.target
+    setFormData((prev) => ({ ...prev, [name]: value }))
+
+    // Reset country if switching away from international
+    if (name === "region" && value !== "international") {
+      setFormData((prev) => ({ ...prev, country: "" }))
+    }
   }
 
   async function handleSubmit(e: React.FormEvent) {
     e.preventDefault()
-    if (!formData.name || !formData.email || !formData.phone) return
+    if (!formData.name || !formData.email || !formData.phone || !formData.region) return
+
+    // Require Turnstile token if configured
+    if (process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY && !token) {
+      setSubmitError("Please complete the verification challenge.")
+      return
+    }
 
     setIsSubmitting(true)
+    setSubmitError(null)
 
     try {
-      const response = await fetch('https://hook.eu2.make.com/pw1doyoqo27bxghhj4vf4j0lv3k8wi81', {
+      // TODO: Replace with actual make.com webhook for SA
+      const response = await fetch(process.env.NEXT_PUBLIC_MAKE_FRANCHISE_WEBHOOK || 'https://hook.eu2.make.com/placeholder', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -135,13 +194,15 @@ export default function FranchisePage() {
           name: formData.name,
           email: formData.email,
           phone: formData.phone,
-          city: formData.city,
+          region: formData.region,
+          country: isInternational ? formData.country : "South Africa",
           investment: formData.investment,
           experience: formData.experience,
           message: formData.message,
           submittedAt: new Date().toISOString(),
-          source: 'barcelos-india-website',
+          source: 'barcelos-sa-website',
           formType: 'franchise-inquiry',
+          turnstileToken: token,
         }),
       })
 
@@ -150,9 +211,10 @@ export default function FranchisePage() {
       }
 
       setIsSubmitted(true)
+      resetTurnstile()
     } catch (error) {
       console.error('Form submission error:', error)
-      alert('There was an error submitting your inquiry. Please try again or email us directly.')
+      setSubmitError('There was an error submitting your inquiry. Please try again or email us directly.')
     } finally {
       setIsSubmitting(false)
     }
@@ -189,8 +251,8 @@ export default function FranchisePage() {
               </h1>
 
               <p className="text-xl text-white/80 mb-8 leading-relaxed">
-                Partner with a globally recognised flame-grilled chicken brand. Bring authentic
-                Portuguese flavours to your city and be part of our expanding family across India.
+                Partner with South Africa&apos;s leading flame-grilled chicken brand. With 30+ years
+                of heritage and world-class infrastructure, we set our franchisees up for success.
               </p>
 
               <Button variant="cta" size="lg" asChild>
@@ -205,7 +267,6 @@ export default function FranchisePage() {
 
         {/* Stats Section */}
         <section className="py-16 bg-barcelos-red relative overflow-hidden">
-          {/* Background texture */}
           <div
             className="absolute inset-0 opacity-5"
             style={{
@@ -215,7 +276,7 @@ export default function FranchisePage() {
           />
           <div className="container-wide relative z-10">
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-5xl mx-auto">
-              {stats.map((stat, index) => (
+              {stats.map((stat) => (
                 <div
                   key={stat.label}
                   className="group relative overflow-hidden rounded-2xl p-6 md:p-8 text-center border border-white/20 hover:border-flame-yellow/50 transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl hover:shadow-black/30"
@@ -223,11 +284,8 @@ export default function FranchisePage() {
                     background: 'linear-gradient(145deg, rgba(255,255,255,0.18) 0%, rgba(255,255,255,0.05) 100%)',
                   }}
                 >
-                  {/* Decorative corner accents */}
                   <div className="absolute top-0 right-0 w-20 h-20 bg-gradient-to-bl from-flame-yellow/25 to-transparent rounded-bl-[3rem] group-hover:from-flame-yellow/40 transition-all duration-500" />
                   <div className="absolute bottom-0 left-0 w-16 h-16 bg-gradient-to-tr from-white/15 to-transparent rounded-tr-[2rem]" />
-
-                  {/* Inner glow effect */}
                   <div className="absolute inset-0 bg-gradient-to-t from-black/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
 
                   <p className="font-display font-bold text-4xl md:text-5xl lg:text-6xl text-white mb-3 relative z-10 group-hover:text-flame-yellow transition-colors duration-300 drop-shadow-lg">
@@ -248,11 +306,11 @@ export default function FranchisePage() {
                 Why Partner With Us
               </span>
               <h2 className="font-display font-bold text-charcoal text-3xl md:text-4xl mb-4 uppercase">
-                A PROVEN GLOBAL SUCCESS STORY
+                A PROVEN SOUTH AFRICAN SUCCESS STORY
               </h2>
               <p className="text-lg text-charcoal-medium max-w-2xl mx-auto">
-                Barcelos has been perfecting the art of flame-grilled chicken since 1993.
-                Our proven franchise model has expanded to over 120 restaurants across 17+ countries.
+                Born in Pretoria in 1993, Barcelos has grown into a global brand with 120+
+                restaurants across 17+ countries — all supported from our South African headquarters.
               </p>
             </div>
 
@@ -276,84 +334,40 @@ export default function FranchisePage() {
           </div>
         </section>
 
-        {/* Brand Story */}
-        <section className="section-padding bg-white">
-          <div className="container-wide">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-              <div>
-                <span className="inline-block px-4 py-1.5 mb-4 text-sm font-semibold text-primary bg-primary/10 rounded-full uppercase tracking-wide">
-                  Our Heritage
-                </span>
-                <h2 className="font-display font-bold text-charcoal text-3xl md:text-4xl mb-6 uppercase">
-                  A LEGACY OF FLAME-GRILLED EXCELLENCE
-                </h2>
-                <div className="space-y-4 text-charcoal-medium">
-                  <p>
-                    In 1993, Costa Mazzis opened the first Barcelos in Pretoria, South Africa.
-                    Inspired by the 800-year-old legend of the Barcelos Rooster and armed with
-                    authentic Portuguese peri-peri recipes, he created something revolutionary.
-                  </p>
-                  <p>
-                    Today, Barcelos has grown into a global brand spanning 17+ countries with
-                    120+ restaurants. The secret to our success? Unwavering commitment to quality,
-                    authentic flavours, and treating every guest like family.
-                  </p>
-                  <p>
-                    Now, we&apos;re bringing this flame-grilled legacy to India, and we&apos;re looking
-                    for passionate partners to join us on this exciting journey.
-                  </p>
-                </div>
-                <div className="mt-8">
-                  <Button variant="outline" asChild>
-                    <Link href="/our-story">
-                      Read Our Full Story
-                      <ArrowRight className="size-4" />
-                    </Link>
-                  </Button>
-                </div>
-              </div>
-
-              <div className="relative">
-                <div className="absolute inset-0 bg-barcelos-red/5 rounded-3xl rotate-3" />
-                <div className="absolute inset-0 bg-flame-yellow/5 rounded-3xl -rotate-3" />
-                <div className="relative rounded-3xl overflow-hidden shadow-2xl">
-                  <Image
-                    src="/images/brand/costa-jared-handover.png"
-                    alt="Costa Mazzis and Jared Mazzis - The Barcelos Family Legacy"
-                    width={600}
-                    height={400}
-                    className="w-full h-auto"
-                  />
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Support We Offer */}
+        {/* Infrastructure Showcase */}
         <section className="section-padding bg-charcoal text-white">
           <div className="container-wide">
             <div className="text-center mb-12">
               <span className="inline-block px-4 py-1.5 mb-4 text-sm font-semibold text-flame-yellow bg-flame-yellow/10 rounded-full uppercase tracking-wide">
-                Partner Support
+                Our Infrastructure
               </span>
               <h2 className="font-display font-bold text-white text-3xl md:text-4xl mb-4 uppercase">
-                WE&apos;RE WITH YOU EVERY STEP
+                WORLD-CLASS SUPPORT SYSTEMS
               </h2>
               <p className="text-lg text-white/80 max-w-2xl mx-auto">
-                From site selection to grand opening and beyond, our dedicated team provides
-                comprehensive support to ensure your success.
+                Our South African headquarters houses everything you need to succeed —
+                from training to production to store build-out.
               </p>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-              {supportItems.map((item) => (
+              {infrastructureItems.map((item) => (
                 <div
                   key={item.title}
                   className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10 hover:bg-white/10 transition-colors"
                 >
-                  <div className="w-12 h-12 rounded-xl bg-barcelos-red/20 flex items-center justify-center mb-4">
-                    <item.icon className="size-6 text-barcelos-red" />
+                  <div className={`w-12 h-12 rounded-xl flex items-center justify-center mb-4 ${
+                    item.color === "barcelos-red" ? "bg-barcelos-red/20" :
+                    item.color === "flame-yellow" ? "bg-flame-yellow/20" :
+                    item.color === "barcelos-green" ? "bg-barcelos-green/20" :
+                    "bg-primary/20"
+                  }`}>
+                    <item.icon className={`size-6 ${
+                      item.color === "barcelos-red" ? "text-barcelos-red" :
+                      item.color === "flame-yellow" ? "text-flame-yellow" :
+                      item.color === "barcelos-green" ? "text-barcelos-green" :
+                      "text-primary"
+                    }`} />
                   </div>
                   <h3 className="font-display font-semibold text-white text-lg mb-2">
                     {item.title}
@@ -367,8 +381,61 @@ export default function FranchisePage() {
           </div>
         </section>
 
-        {/* Requirements */}
+        {/* Investment Ranges - Hybrid Model */}
         <section className="section-padding bg-stone-cream">
+          <div className="container-wide">
+            <div className="text-center mb-12">
+              <span className="inline-block px-4 py-1.5 mb-4 text-sm font-semibold text-primary bg-primary/10 rounded-full uppercase tracking-wide">
+                Investment Overview
+              </span>
+              <h2 className="font-display font-bold text-charcoal text-3xl md:text-4xl mb-4 uppercase">
+                FRANCHISE FORMATS
+              </h2>
+              <p className="text-lg text-charcoal-medium max-w-2xl mx-auto">
+                Choose the format that best suits your location and investment capacity.
+                Detailed financials provided upon inquiry.
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+              {investmentRanges.map((item, index) => (
+                <BackgroundGradient
+                  key={item.format}
+                  className="rounded-2xl bg-white p-1"
+                  containerClassName="h-full"
+                >
+                  <div className="relative h-full bg-white rounded-xl p-8 text-center">
+                    {index === 1 && (
+                      <span className="absolute -top-3 left-1/2 -translate-x-1/2 px-3 py-1 bg-barcelos-red text-white text-xs font-semibold rounded-full">
+                        MOST POPULAR
+                      </span>
+                    )}
+                    <h3 className="font-display font-bold text-charcoal text-2xl mb-2 uppercase">
+                      {item.format}
+                    </h3>
+                    <p className="text-charcoal-medium text-sm mb-4">
+                      {item.description}
+                    </p>
+                    <p className="font-display font-bold text-barcelos-red text-3xl mb-2">
+                      {item.range}
+                    </p>
+                    <p className="text-charcoal-light text-sm">
+                      Store size: {item.size}
+                    </p>
+                  </div>
+                </BackgroundGradient>
+              ))}
+            </div>
+
+            <p className="text-center text-charcoal-medium text-sm mt-8">
+              * Investment ranges are estimates and may vary based on location and specifications.
+              Detailed breakdown provided during consultation.
+            </p>
+          </div>
+        </section>
+
+        {/* Requirements */}
+        <section className="section-padding bg-white">
           <div className="container-wide">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
               <div>
@@ -398,8 +465,8 @@ export default function FranchisePage() {
                 <div className="absolute inset-0 bg-flame-yellow/5 rounded-3xl -rotate-2" />
                 <div className="relative rounded-3xl overflow-hidden shadow-2xl">
                   <Image
-                    src="/images/brand/jared-mazzis-india.jpg"
-                    alt="Barcelos India Franchise Expansion"
+                    src="/images/brand/costa-grilling.png"
+                    alt="Barcelos Flame-Grilled Chicken"
                     width={600}
                     height={400}
                     className="w-full h-auto"
@@ -411,7 +478,7 @@ export default function FranchisePage() {
         </section>
 
         {/* Inquiry Form */}
-        <section id="inquiry-form" className="section-padding bg-white scroll-mt-20">
+        <section id="inquiry-form" className="section-padding bg-stone-cream scroll-mt-20">
           <div className="container-wide">
             <div className="max-w-3xl mx-auto">
               <div className="text-center mb-12">
@@ -444,7 +511,13 @@ export default function FranchisePage() {
                   </Button>
                 </div>
               ) : (
-                <Card className="p-8">
+                <MovingBorderButton
+                  as="div"
+                  borderRadius="1.5rem"
+                  className="bg-white p-8"
+                  containerClassName="w-full"
+                  borderClassName="bg-[radial-gradient(var(--barcelos-red)_40%,transparent_60%)]"
+                >
                   <form onSubmit={handleSubmit} className="space-y-6">
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                       <div>
@@ -492,7 +565,7 @@ export default function FranchisePage() {
                             name="phone"
                             value={formData.phone}
                             onChange={handleChange}
-                            placeholder="+91 98765 43210"
+                            placeholder="+27 82 123 4567"
                             required
                             className="pl-10"
                           />
@@ -502,19 +575,45 @@ export default function FranchisePage() {
 
                       <div>
                         <label className="block text-sm font-medium text-charcoal mb-2">
-                          Preferred City/Region
+                          Region *
                         </label>
                         <div className="relative">
-                          <Input
-                            name="city"
-                            value={formData.city}
+                          <select
+                            name="region"
+                            value={formData.region}
                             onChange={handleChange}
-                            placeholder="e.g., Mumbai, Delhi, Bangalore"
-                            className="pl-10"
-                          />
+                            required
+                            className="w-full pl-10 pr-3 py-2.5 border border-neutral-200 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-barcelos-red/20 focus:border-barcelos-red bg-white"
+                          >
+                            {regionOptions.map((option) => (
+                              <option key={option.value} value={option.value}>
+                                {option.label}
+                              </option>
+                            ))}
+                          </select>
                           <MapPin className="absolute left-3 top-1/2 -translate-y-1/2 size-4 text-neutral-400" />
                         </div>
                       </div>
+
+                      {/* Conditional country field for international */}
+                      {isInternational && (
+                        <div className="md:col-span-2">
+                          <label className="block text-sm font-medium text-charcoal mb-2">
+                            Country *
+                          </label>
+                          <div className="relative">
+                            <Input
+                              name="country"
+                              value={formData.country}
+                              onChange={handleChange}
+                              placeholder="Your country"
+                              required={isInternational}
+                              className="pl-10"
+                            />
+                            <Globe2 className="absolute left-3 top-1/2 -translate-y-1/2 size-4 text-neutral-400" />
+                          </div>
+                        </div>
+                      )}
 
                       <div>
                         <label className="block text-sm font-medium text-charcoal mb-2">
@@ -527,10 +626,20 @@ export default function FranchisePage() {
                           className="w-full px-3 py-2.5 border border-neutral-200 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-barcelos-red/20 focus:border-barcelos-red bg-white"
                         >
                           <option value="">Select range</option>
-                          <option value="50-75L">₹50 Lakhs - ₹75 Lakhs</option>
-                          <option value="75L-1Cr">₹75 Lakhs - ₹1 Crore</option>
-                          <option value="1Cr-2Cr">₹1 Crore - ₹2 Crores</option>
-                          <option value="2Cr+">₹2 Crores+</option>
+                          {isInternational ? (
+                            <>
+                              <option value="100k-150k">$100,000 - $150,000 USD</option>
+                              <option value="150k-200k">$150,000 - $200,000 USD</option>
+                              <option value="200k+">$200,000+ USD</option>
+                            </>
+                          ) : (
+                            <>
+                              <option value="1.5M-2M">R1.5M - R2M</option>
+                              <option value="2M-2.5M">R2M - R2.5M</option>
+                              <option value="2.5M-3M">R2.5M - R3M</option>
+                              <option value="3M+">R3M+</option>
+                            </>
+                          )}
                         </select>
                       </div>
 
@@ -567,6 +676,22 @@ export default function FranchisePage() {
                       />
                     </div>
 
+                    {/* Turnstile Bot Protection */}
+                    {process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY && (
+                      <div className="flex justify-center">
+                        <Turnstile
+                          onVerify={handleVerify}
+                          onError={handleError}
+                          onExpire={handleExpire}
+                          theme="light"
+                        />
+                      </div>
+                    )}
+
+                    {submitError && (
+                      <p className="text-red-600 text-sm text-center">{submitError}</p>
+                    )}
+
                     <div className="text-center">
                       <Button
                         type="submit"
@@ -580,7 +705,7 @@ export default function FranchisePage() {
                       </Button>
                     </div>
                   </form>
-                </Card>
+                </MovingBorderButton>
               )}
 
               {/* Contact Info */}

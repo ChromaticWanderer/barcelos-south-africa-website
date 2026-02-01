@@ -4,7 +4,7 @@ import * as React from "react"
 import { motion } from "motion/react"
 import Link from "next/link"
 import Image from "next/image"
-import { MapPin, ChevronDown } from "lucide-react"
+import { MapPin } from "lucide-react"
 
 import { cn } from "@/lib/utils"
 import { brandMessages } from "@/lib/constants/site"
@@ -24,24 +24,15 @@ import { Button as MovingBorderButton } from "@/components/ui/moving-border"
 
 interface HeroSectionProps {
   className?: string
-  headline?: string
   subheadline?: string
   gradientFade?: boolean
 }
 
 export function HeroSection({
   className,
-  headline = brandMessages.hero.headline,
   subheadline = brandMessages.hero.subheadline,
   gradientFade = true,
 }: HeroSectionProps) {
-  const scrollToContent = () => {
-    const nextSection = document.getElementById("why-barcelos")
-    if (nextSection) {
-      nextSection.scrollIntoView({ behavior: "smooth" })
-    }
-  }
-
   return (
     <div
       className={cn(

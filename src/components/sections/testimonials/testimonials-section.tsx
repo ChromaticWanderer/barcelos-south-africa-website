@@ -1,7 +1,6 @@
 "use client"
 
 import * as React from "react"
-import Image from "next/image"
 import { Star, Quote } from "lucide-react"
 
 import { cn } from "@/lib/utils"

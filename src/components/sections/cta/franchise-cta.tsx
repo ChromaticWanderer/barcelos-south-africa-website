@@ -42,21 +42,14 @@ const benefits = [
   },
   {
     icon: TrendingUp,
-    title: "GROWING MARKET",
-    description: "Premium QSR segment expanding rapidly in India with strong consumer demand",
+    title: "STRONG INFRASTRUCTURE",
+    description: "Purpose-built training academy, central kitchen, and in-house shopfitting team",
   },
   {
     icon: Users,
     title: "FULL SUPPORT",
     description: "Comprehensive training, marketing resources, and ongoing operational guidance",
   },
-]
-
-const stats = [
-  { value: "30+", label: "Years Heritage" },
-  { value: "17+", label: "Countries" },
-  { value: "120+", label: "Restaurants" },
-  { value: "1993", label: "Est." },
 ]
 
 export function FranchiseCTA({ className }: FranchiseCTAProps) {
@@ -109,9 +102,9 @@ export function FranchiseCTA({ className }: FranchiseCTAProps) {
                   JOIN THE BARCELOS FAMILY
                 </h2>
                 <p className="text-white/90 text-lg md:text-xl leading-relaxed">
-                  Join the growing Barcelos family and bring authentic Portuguese
-                  flame-grilled chicken to your city. Limited territories
-                  available across India.
+                  Join the Barcelos family and bring authentic Portuguese
+                  flame-grilled chicken to your area. Franchise opportunities
+                  available across South Africa and internationally.
                 </p>
               </div>
             </ScrollReveal>

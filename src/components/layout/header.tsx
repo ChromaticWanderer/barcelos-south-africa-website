@@ -87,31 +87,21 @@ export function Header() {
           {/* Right side actions */}
           <div className="flex items-center gap-3">
             {/* Order Now CTA - White button with white moving border on red */}
-            {orderNowConfig.comingSoon ? (
-              <div
-                className="bg-white/80 text-barcelos-red/70 font-semibold px-3 py-1.5 sm:px-6 sm:py-2.5 text-sm sm:text-base rounded-full cursor-not-allowed"
-                aria-label="Online ordering coming soon"
-              >
-                <span className="hidden sm:inline">{orderNowConfig.comingSoonLabel}</span>
-                <span className="sm:hidden">Soon</span>
-              </div>
-            ) : (
-              <MovingBorderButton
-                as="a"
-                href={orderNowConfig.href}
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label={orderNowConfig.ariaLabel}
-                borderRadius="1.75rem"
-                className="bg-white text-barcelos-red font-semibold px-3 py-1.5 sm:px-6 sm:py-2.5 text-sm sm:text-base border-0"
-                containerClassName="h-9 sm:h-11"
-                borderClassName="bg-[radial-gradient(white_40%,transparent_60%)]"
-              >
-                <span className="hidden sm:inline">{orderNowConfig.label}</span>
-                <span className="sm:hidden">Order</span>
-                <ExternalLink className="size-3 sm:size-4 ml-1 sm:ml-2" />
-              </MovingBorderButton>
-            )}
+            <MovingBorderButton
+              as="a"
+              href={orderNowConfig.href}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label={orderNowConfig.ariaLabel}
+              borderRadius="1.75rem"
+              className="bg-white text-barcelos-red font-semibold px-3 py-1.5 sm:px-6 sm:py-2.5 text-sm sm:text-base border-0"
+              containerClassName="h-9 sm:h-11"
+              borderClassName="bg-[radial-gradient(white_40%,transparent_60%)]"
+            >
+              <span className="hidden sm:inline">{orderNowConfig.label}</span>
+              <span className="sm:hidden">Order</span>
+              <ExternalLink className="size-3 sm:size-4 ml-1 sm:ml-2" />
+            </MovingBorderButton>
 
             {/* Mobile Menu Trigger - only visible below md (mobile only) */}
             <Sheet open={isMobileMenuOpen} onOpenChange={setIsMobileMenuOpen}>
@@ -212,28 +202,19 @@ function MobileNav({ pathname, onClose }: MobileNavProps) {
 
       {/* Order Now CTA */}
       <div className="p-4 border-t">
-        {orderNowConfig.comingSoon ? (
-          <div
-            className="w-full h-12 flex items-center justify-center bg-primary/50 text-white/70 font-semibold px-6 py-3 rounded-full cursor-not-allowed"
-            aria-label="Online ordering coming soon"
-          >
-            {orderNowConfig.comingSoonLabel}
-          </div>
-        ) : (
-          <MovingBorderButton
-            as="a"
-            href={orderNowConfig.href}
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label={orderNowConfig.ariaLabel}
-            borderRadius="1.75rem"
-            className="bg-primary text-white font-semibold px-6 py-3"
-            containerClassName="w-full h-12"
-          >
-            {orderNowConfig.label}
-            <ExternalLink className="size-4 ml-2" />
-          </MovingBorderButton>
-        )}
+        <MovingBorderButton
+          as="a"
+          href={orderNowConfig.href}
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label={orderNowConfig.ariaLabel}
+          borderRadius="1.75rem"
+          className="bg-primary text-white font-semibold px-6 py-3"
+          containerClassName="w-full h-12"
+        >
+          {orderNowConfig.label}
+          <ExternalLink className="size-4 ml-2" />
+        </MovingBorderButton>
       </div>
     </div>
   )

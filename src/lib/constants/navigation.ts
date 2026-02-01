@@ -1,5 +1,5 @@
 /**
- * Navigation Constants - Barcelos India
+ * Navigation Constants - Barcelos South Africa
  *
  * Central configuration for site navigation
  * Multi-page architecture with dedicated pages for each section
@@ -22,12 +22,7 @@ export const primaryNavItems: NavItem[] = [
   {
     label: "OUR STORY",
     href: "/our-story",
-    description: "The flame-grilled journey from Portugal to India",
-  },
-  {
-    label: "LOCATIONS",
-    href: "/locations",
-    description: "Find a Barcelos near you",
+    description: "The flame-grilled journey from Portugal to South Africa",
   },
   {
     label: "FRANCHISE",
@@ -65,8 +60,7 @@ export const footerNavSections = [
     title: "EXPLORE",
     items: [
       { label: "OUR STORY", href: "/our-story" },
-      { label: "LOCATIONS", href: "/locations" },
-      { label: "MENU", href: "/menu" },
+      { label: "ORDER ONLINE", href: "https://orders.barcelos.co.za", isExternal: true },
     ],
   },
   {
@@ -81,7 +75,6 @@ export const footerNavSections = [
     title: "CONNECT",
     items: [
       { label: "CONTACT US", href: "/contact" },
-      { label: "FIND A STORE", href: "/locations" },
     ],
   },
   {
@@ -99,33 +92,30 @@ export const footerNavSections = [
 export const socialLinks = [
   {
     label: "Instagram",
-    href: "https://instagram.com/barcelosindia",
+    href: "https://instagram.com/barcelos_sa",
     icon: "instagram",
   },
   {
     label: "Facebook",
-    href: "https://facebook.com/barcelosindia",
+    href: "https://facebook.com/BarcelosSA",
     icon: "facebook",
   },
   {
     label: "Twitter",
-    href: "https://twitter.com/barcelosindia",
+    href: "https://twitter.com/barcelos_sa",
     icon: "twitter",
   },
 ]
 
 /**
  * Order Now CTA configuration
- * Links to PetPooja ordering platform
- * TODO: Replace placeholder URL with actual PetPooja URL when provided
- * Set comingSoon to false when PetPooja integration is ready
+ * Links to ServeUp ordering platform
  */
 export const orderNowConfig = {
   label: "ORDER NOW",
-  comingSoonLabel: "COMING SOON : ORDER NOW",
-  href: "https://petpooja.com/barcelos-india", // Placeholder - to be updated
+  href: "https://orders.barcelos.co.za",
   isExternal: true,
-  ariaLabel: "Order from Barcelos via PetPooja (opens in new tab)",
-  /** Set to false when PetPooja ordering is ready to go live */
-  comingSoon: true,
+  ariaLabel: "Order from Barcelos via ServeUp (opens in new tab)",
+  /** ServeUp is live - set to false */
+  comingSoon: false,
 }

@@ -34,16 +34,16 @@ export function CountUp({
   className,
   decimals = 0
 }: CountUpProps) {
-  const [count, setCount] = useState(0)
+  const prefersReducedMotion = useReducedMotion()
+  // Initialize with final value if reduced motion preferred
+  const [count, setCount] = useState(prefersReducedMotion ? end : 0)
   const ref = useRef(null)
   const isInView = useInView(ref, { once: true, margin: "-50px" })
   const hasAnimated = useRef(false)
-  const prefersReducedMotion = useReducedMotion()
 
   useEffect(() => {
-    // If user prefers reduced motion, show final value immediately
+    // Skip animation if reduced motion preferred (already initialized with end value)
     if (prefersReducedMotion) {
-      setCount(end)
       return
     }
 

@@ -1,5 +1,5 @@
 /**
- * Site Constants - Barcelos India
+ * Site Constants - Barcelos South Africa
  *
  * Central configuration for site-wide constants.
  * This file serves as the single source of truth for:
@@ -8,9 +8,6 @@
  * - External links and integrations
  * - Brand assets
  * - Social media handles
- *
- * IMPORTANT: Items marked with [PLACEHOLDER] or [PENDING_VERIFICATION]
- * require stakeholder input before production launch.
  */
 
 /**
@@ -22,26 +19,23 @@ export const PLACEHOLDER_MARKERS = {
 } as const
 
 export const siteConfig = {
-  name: "Barcelos India",
+  name: "Barcelos South Africa",
   tagline: "Where Flame Meets Flavour",
   description:
-    "Experience authentic Portuguese flame-grilled chicken at Barcelos India. Premium quality, bold flavours, and the signature Peri-Peri taste perfected for Indian palates.",
-  url: "https://www.barcelos.co.in",
+    "Experience authentic Portuguese flame-grilled chicken at Barcelos. Since 1993, we've been South Africa's home of Afro-Portuguese peri-peri perfection.",
+  url: "https://www.barcelos.co.za",
   ogImage: "/images/og-image.jpg",
 
   /**
    * Contact Information
-   *
-   * TODO: Verify all contact details with stakeholders before launch
-   * Items marked [PLACEHOLDER] need real values from business team
    */
   contact: {
     // Primary customer service email
-    email: "barcelos.india@barcelos.com",
+    email: "info@barcelos.co.za",
     // Support email for customer issues
-    supportEmail: "barcelos.india@barcelos.com",
+    supportEmail: "support@barcelos.co.za",
     // Franchise inquiry email
-    franchiseEmail: "barcelos.india@barcelos.com",
+    franchiseEmail: "franchise@barcelos.co.za",
     // Response time commitment
     emailResponseTime: "24 hours",
   },
@@ -53,20 +47,10 @@ export const siteConfig = {
    */
   links: {
     /**
-     * PetPooja Online Ordering URL
-     *
-     * TODO: Replace with actual PetPooja ordering URL when provided
-     * This URL will be used for all "Order Online" CTAs across the site
-     *
-     * Expected format: https://app.petpooja.com/barcelos-india or similar
+     * ServeUp Online Ordering URL
+     * Primary ordering platform for South Africa
      */
-    petpoojaUrl: "https://order.barcelosindia.com [PLACEHOLDER - AWAITING_PETPOOJA_URL]",
-
-    /**
-     * Alternative ordering platforms (if applicable)
-     */
-    swiggyUrl: "[PLACEHOLDER - AWAITING_SWIGGY_PARTNER_URL]",
-    zomatoUrl: "[PLACEHOLDER - AWAITING_ZOMATO_PARTNER_URL]",
+    serveUpUrl: "https://orders.barcelos.co.za",
 
     /**
      * Google Maps base URL for location links
@@ -82,19 +66,18 @@ export const siteConfig = {
 
   /**
    * Social Media Handles
-   *
-   * TODO: Verify all social handles are correct and active
    */
   social: {
-    instagram: "@barcelosindia",
-    instagramUrl: "https://instagram.com/barcelosindia",
-    facebook: "barcelosindia",
-    facebookUrl: "https://facebook.com/barcelosindia",
-    twitter: "@barcelosindia",
-    twitterUrl: "https://twitter.com/barcelosindia",
-    // TODO: Add YouTube, LinkedIn if applicable
-    youtube: "[PLACEHOLDER]",
-    linkedin: "[PLACEHOLDER]",
+    instagram: "@barcelos_sa",
+    instagramUrl: "https://instagram.com/barcelos_sa",
+    facebook: "BarcelosSA",
+    facebookUrl: "https://facebook.com/BarcelosSA",
+    twitter: "@barcelos_sa",
+    twitterUrl: "https://twitter.com/barcelos_sa",
+    youtube: "BarcelosSA",
+    youtubeUrl: "https://youtube.com/@BarcelosSA",
+    linkedin: "barcelos-sa",
+    linkedinUrl: "https://linkedin.com/company/barcelos-sa",
   },
 
   /**
@@ -116,7 +99,7 @@ export const siteConfig = {
    */
   copyright: {
     year: new Date().getFullYear(),
-    holder: "Barcelos India",
+    holder: "Barcelos South Africa",
     text: "All rights reserved.",
   },
 
@@ -124,18 +107,19 @@ export const siteConfig = {
    * SEO and Meta Configuration
    */
   seo: {
-    titleTemplate: "%s | Barcelos India",
-    defaultTitle: "Barcelos India - Authentic Portuguese Flame-Grilled Chicken",
+    titleTemplate: "%s | Barcelos South Africa",
+    defaultTitle: "Barcelos South Africa - Authentic Portuguese Flame-Grilled Chicken",
     defaultDescription:
-      "Experience authentic Portuguese flame-grilled chicken at Barcelos India. Premium quality, bold flavours, and the signature Peri-Peri taste.",
+      "Experience authentic Portuguese flame-grilled chicken at Barcelos. Since 1993, South Africa's home of Afro-Portuguese peri-peri perfection.",
     keywords: [
       "Barcelos",
       "Portuguese chicken",
       "flame-grilled chicken",
       "peri-peri",
-      "Barcelos India",
+      "Barcelos South Africa",
       "grilled chicken restaurant",
       "fast casual dining",
+      "South African franchise",
     ],
   },
 }
@@ -147,7 +131,7 @@ export const brandMessages = {
   hero: {
     headline: "AUTHENTIC AFRO-PORTUGUESE FLAME GRILLED CHICKEN",
     subheadline:
-      "30+ years of heritage. 17+ countries. One fantastic product. Fast-casual dining with soul.",
+      "30+ years of heritage. 17+ countries. Born in South Africa. Fast-casual dining with soul.",
   },
   whyBarcel: [
     {
@@ -159,7 +143,7 @@ export const brandMessages = {
     {
       title: "PORTUGUESE HERITAGE",
       description:
-        "A legacy of flavour that began in South Africa, rooted in Portuguese grilling traditions.",
+        "A legacy of flavour born in South Africa, rooted in Portuguese grilling traditions since 1993.",
       icon: "globe",
     },
     {
@@ -172,8 +156,6 @@ export const brandMessages = {
   cta: {
     orderNow: "ORDER NOW",
     orderOnline: "ORDER ONLINE",
-    viewMenu: "VIEW MENU",
-    findStore: "FIND A RESTAURANT",
     learnMore: "LEARN MORE",
     franchiseInquiry: "ENQUIRE NOW",
   },

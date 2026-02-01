@@ -1,10 +1,10 @@
 "use client"
 
 import Link from "next/link"
-import { Instagram, Facebook, Twitter, MapPin, Mail } from "lucide-react"
+import { Instagram, Facebook, Twitter, ExternalLink, Mail } from "lucide-react"
 
-import { footerNavSections, socialLinks } from "@/lib/constants/navigation"
-import { siteConfig, getDisplayValue } from "@/lib/constants/site"
+import { footerNavSections, socialLinks, orderNowConfig } from "@/lib/constants/navigation"
+import { siteConfig } from "@/lib/constants/site"
 import { Logo } from "@/components/shared/logo"
 import {
   Accordion,
@@ -14,7 +14,7 @@ import {
 } from "@/components/ui/accordion"
 
 /**
- * Footer Component - Barcelos India
+ * Footer Component - Barcelos South Africa
  *
  * Full-width footer with:
  * - Brand info and tagline
@@ -46,8 +46,8 @@ export function Footer() {
 
             {/* Description */}
             <p className="text-neutral-400 mb-8 max-w-xs text-sm leading-relaxed">
-              {siteConfig.tagline}. Experience authentic Portuguese flame-grilled
-              chicken, perfected for Indian taste.
+              {siteConfig.tagline}. Since 1993, South Africa&apos;s home of flame-grilled
+              peri-peri perfection.
             </p>
 
             {/* Enhanced Social Links - Larger with scale + glow */}
@@ -77,12 +77,24 @@ export function Footer() {
                 <ul className="space-y-3">
                   {section.items.map((item) => (
                     <li key={item.href}>
-                      <Link
-                        href={item.href}
-                        className="text-neutral-400 hover:text-white transition-colors text-sm"
-                      >
-                        {item.label}
-                      </Link>
+                      {'isExternal' in item && item.isExternal ? (
+                        <a
+                          href={item.href}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-neutral-400 hover:text-white transition-colors text-sm inline-flex items-center gap-1"
+                        >
+                          {item.label}
+                          <ExternalLink className="size-3" />
+                        </a>
+                      ) : (
+                        <Link
+                          href={item.href}
+                          className="text-neutral-400 hover:text-white transition-colors text-sm"
+                        >
+                          {item.label}
+                        </Link>
+                      )}
                     </li>
                   ))}
                 </ul>
@@ -106,12 +118,24 @@ export function Footer() {
                     <ul className="space-y-3">
                       {section.items.map((item) => (
                         <li key={item.href}>
-                          <Link
-                            href={item.href}
-                            className="text-neutral-400 hover:text-white transition-colors text-sm"
-                          >
-                            {item.label}
-                          </Link>
+                          {'isExternal' in item && item.isExternal ? (
+                            <a
+                              href={item.href}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="text-neutral-400 hover:text-white transition-colors text-sm inline-flex items-center gap-1"
+                            >
+                              {item.label}
+                              <ExternalLink className="size-3" />
+                            </a>
+                          ) : (
+                            <Link
+                              href={item.href}
+                              className="text-neutral-400 hover:text-white transition-colors text-sm"
+                            >
+                              {item.label}
+                            </Link>
+                          )}
                         </li>
                       ))}
                     </ul>
@@ -134,13 +158,15 @@ export function Footer() {
                 <Mail className="size-4 text-barcelos-red group-hover:scale-110 transition-transform" />
                 <span className="text-sm">{siteConfig.contact.email}</span>
               </a>
-              <Link
-                href="/locations"
+              <a
+                href={orderNowConfig.href}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="group flex items-center gap-2 text-neutral-400 hover:text-white transition-colors"
               >
-                <MapPin className="size-4 text-barcelos-red group-hover:scale-110 transition-transform" />
-                <span className="text-sm">Find a Restaurant</span>
-              </Link>
+                <ExternalLink className="size-4 text-barcelos-red group-hover:scale-110 transition-transform" />
+                <span className="text-sm">Order Online</span>
+              </a>
             </div>
 
           </div>

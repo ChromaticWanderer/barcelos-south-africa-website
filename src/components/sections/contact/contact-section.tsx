@@ -5,7 +5,7 @@ import { Mail, MapPin, MessageCircle } from "lucide-react"
 
 import Link from "next/link"
 import { cn } from "@/lib/utils"
-import { siteConfig, getDisplayValue, isPlaceholder } from "@/lib/constants/site"
+import { siteConfig } from "@/lib/constants/site"
 
 /**
  * ContactSection Component
