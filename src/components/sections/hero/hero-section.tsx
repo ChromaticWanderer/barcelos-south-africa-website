@@ -59,6 +59,7 @@ function BentoImageCard({
   priority = false,
   sizes,
   delay = 0,
+  objectPosition = "center",
 }: {
   src: string
   alt: string
@@ -66,6 +67,7 @@ function BentoImageCard({
   priority?: boolean
   sizes: string
   delay?: number
+  objectPosition?: string
 }) {
   return (
     <motion.div
@@ -84,6 +86,7 @@ function BentoImageCard({
         priority={priority}
         sizes={sizes}
         className="object-cover transition-transform duration-500 group-hover:scale-105"
+        style={{ objectPosition }}
       />
       {/* Very subtle gradient on hover only - keeps images vibrant */}
       <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
@@ -201,13 +204,14 @@ export function HeroSection({
                 delay={0.15}
               />
 
-              {/* Image 5: Two Chickens - Full width, shorter */}
+              {/* Image 5: Two Chickens - Full width */}
               <BentoImageCard
                 src={foodImages[4].src}
                 alt={foodImages[4].alt}
-                className="col-span-2 aspect-[21/9]"
+                className="col-span-2 aspect-[16/9]"
                 sizes="100vw"
                 delay={0.2}
+                objectPosition="center 40%"
               />
             </div>
           </motion.div>
