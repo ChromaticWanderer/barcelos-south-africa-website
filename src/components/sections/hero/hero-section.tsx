@@ -161,6 +161,7 @@ export function HeroSection({
                 className="col-span-1 row-span-2"
                 sizes="25vw"
                 delay={0.2}
+                objectPosition="left center"
               />
 
               {/* Chicken Burger - 1x1 */}
@@ -211,7 +212,7 @@ export function HeroSection({
                 className="col-span-2 aspect-[16/9]"
                 sizes="100vw"
                 delay={0.2}
-                objectPosition="center 40%"
+                objectPosition="center top"
               />
             </div>
           </motion.div>
