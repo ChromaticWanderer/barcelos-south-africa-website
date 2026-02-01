@@ -10,11 +10,11 @@ import { Card, CardContent } from "@/components/ui/card"
 export const metadata: Metadata = {
   title: "Careers",
   description:
-    "Join the Barcelos India team. Explore career opportunities and be part of our flame-grilled journey. We are always looking for passionate people.",
+    "Join the Barcelos South Africa team. Explore career opportunities and be part of our flame-grilled journey. We are always looking for passionate people.",
 }
 
 /**
- * Careers Page - Barcelos India
+ * Careers Page - Barcelos South Africa
  *
  * Careers landing page with:
  * - Why work with us
@@ -102,7 +102,7 @@ export default function CareersPage() {
                 </h3>
                 <p className="text-charcoal-medium mb-6">
                   We are updating our careers page. Check back soon for exciting
-                  opportunities at Barcelos India.
+                  opportunities at Barcelos South Africa.
                 </p>
                 <Button variant="outline" asChild>
                   <Link href="/contact">

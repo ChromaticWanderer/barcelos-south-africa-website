@@ -1,50 +1,50 @@
 {
-  "site_name": "Barcelos India",
+  "site_name": "Barcelos South Africa",
   "tagline": "Flame Grilled Chicken",
   "brand_promise": "Where Flame Meets Flavour",
   "meta": {
-    "default_title": "Barcelos India - Authentic Flame Grilled Chicken",
-    "default_description": "Experience authentic Portuguese flame-grilled chicken with peri-peri perfection. Founded in 1993, now in India. Order online for delivery or visit our restaurants.",
-    "keywords": "flame grilled chicken, peri peri chicken India, Portuguese chicken, Barcelos India, grilled chicken restaurant, chicken delivery, halal chicken, vegetarian options",
-    "og_image": "/images/og-barcelos-india.jpg",
-    "twitter_handle": "@barcelosindia"
+    "default_title": "Barcelos South Africa - Authentic Flame Grilled Chicken",
+    "default_description": "Experience authentic Afro-Portuguese flame-grilled chicken with peri-peri perfection. Founded in Pretoria 1993. Order online via ServeUp or visit our restaurants.",
+    "keywords": "flame grilled chicken, peri peri chicken South Africa, Portuguese chicken, Barcelos South Africa, grilled chicken restaurant, chicken delivery, halal chicken",
+    "og_image": "/images/og-barcelos-south-africa.jpg",
+    "twitter_handle": "@barcellosSA"
   },
   "primary_cta": {
     "text": "Order Now",
-    "url": "/order",
+    "url": "https://orders.barcelos.co.za",
     "style": "primary"
   },
   "secondary_cta": {
-    "text": "Find Locations",
-    "url": "/locations",
+    "text": "Franchise Opportunities",
+    "url": "/franchise",
     "style": "secondary"
   },
   "usps": [
     "Flame-grilled, not fried",
     "24-hour marinated in secret peri-peri blend",
     "Portuguese heritage since 1993",
-    "12 countries worldwide",
-    "Vegetarian options available",
+    "17+ countries worldwide",
+    "South African headquarters",
     "Quality guaranteed"
   ],
   "tone_guidelines": {
     "voice": "Confident but humble, specific not vague, welcoming to all",
-    "avoid": "Generic template language, overpromising, being disconnected from India",
+    "avoid": "Generic template language, overpromising",
     "examples": {
       "good": "Flame-grilled over real flames, marinated for 24 hours in our signature peri-peri blend",
       "bad": "The most delicious chicken you've ever tasted, guaranteed!"
     }
   },
-  "india_specific": {
-    "payment_methods": ["UPI", "Cards", "Cash on Delivery", "Net Banking", "Wallets"],
-    "delivery_partners": ["Swiggy", "Zomato", "Direct Ordering (coming soon)"],
-    "dietary_tags": ["Vegetarian", "Halal", "Spice Level Indicators"],
-    "languages_supported": ["English", "Hindi (future)"],
+  "south_africa_specific": {
+    "payment_methods": ["Card", "Cash", "SnapScan", "Zapper"],
+    "ordering_platform": "ServeUp (orders.barcelos.co.za)",
+    "dietary_tags": ["Halal", "Spice Level Indicators"],
+    "languages_supported": ["English", "Afrikaans"],
     "trust_signals": [
-      "FSSAI certified",
-      "Hygiene standards maintained",
-      "Quality sourcing",
-      "International brand with local adaptation"
+      "South African owned and operated",
+      "30+ years heritage",
+      "Training academy certified",
+      "Central kitchen quality control"
     ]
   },
   "emergency_banner": {

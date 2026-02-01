@@ -1,5 +1,5 @@
 /**
- * Shared Components - Barcelos India
+ * Shared Components - Barcelos South Africa
  *
  * Export all shared/common components
  *

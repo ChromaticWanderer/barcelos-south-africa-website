@@ -2,7 +2,7 @@ import { cn } from "@/lib/utils"
 import Image from "next/image"
 
 /**
- * PageHeader Component - Barcelos India
+ * PageHeader Component - Barcelos South Africa
  *
  * Consistent page header with title and optional subtitle, badge, and background image.
  * Used across all pages for visual consistency.

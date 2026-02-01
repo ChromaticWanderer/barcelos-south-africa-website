@@ -1,7 +1,7 @@
 import type { NextConfig } from "next"
 
 /**
- * Barcelos India - Next.js Configuration
+ * Barcelos South Africa - Next.js Configuration
  *
  * Optimized configuration for performance, image handling, and build output.
  */
@@ -31,7 +31,7 @@ const nextConfig: NextConfig = {
       // TODO: Add CDN domain when configured
       // {
       //   protocol: 'https',
-      //   hostname: 'cdn.barcelos.co.in',
+      //   hostname: 'cdn.barcelos.co.za',
       //   pathname: '/images/**',
       // },
     ],

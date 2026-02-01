@@ -5,7 +5,7 @@ import Link from "next/link"
 import { ChevronRight, Home } from "lucide-react"
 
 /**
- * Breadcrumb Component - Barcelos India
+ * Breadcrumb Component - Barcelos South Africa
  *
  * Accessible breadcrumb navigation with proper ARIA attributes.
  * Follows WAI-ARIA breadcrumb pattern.

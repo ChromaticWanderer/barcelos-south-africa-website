@@ -1,5 +1,5 @@
 /**
- * Barcelos India - Contact Form API
+ * Barcelos South Africa - Contact Form API
  *
  * Handles contact form submissions across the website.
  * Provides form validation, submission handling, and response formatting.

@@ -19,7 +19,7 @@ import { siteConfig } from "@/lib/constants/site"
 import { Logo } from "@/components/shared/logo"
 
 /**
- * Header Component - Barcelos India
+ * Header Component - Barcelos South Africa
  *
  * Responsive navigation header with:
  * - Logo

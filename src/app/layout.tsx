@@ -14,32 +14,32 @@ const inter = Inter({
 });
 
 /**
- * Site Metadata - Barcelos India
- * SEO optimized for Indian market
+ * Site Metadata - Barcelos South Africa
+ * SEO optimized for South African market
  */
 export const metadata: Metadata = {
-  metadataBase: new URL("https://barcelos.co.in"),
+  metadataBase: new URL("https://barcelos.co.za"),
   title: {
-    default: "Barcelos India | Flame-Grilled Chicken - Portuguese Heritage",
-    template: "%s | Barcelos India",
+    default: "Barcelos South Africa | Flame-Grilled Chicken - Portuguese Heritage",
+    template: "%s | Barcelos South Africa",
   },
   description:
-    "Experience authentic Portuguese flame-grilled chicken at Barcelos India. Premium quality, bold flavours, and the signature Peri-Peri taste perfected for Indian palates. Find a restaurant near you or order online.",
+    "Experience authentic Afro-Portuguese flame-grilled chicken at Barcelos South Africa. Premium quality, bold flavours, and the signature Peri-Peri taste since 1993. Order online or find a restaurant near you.",
   keywords: [
     "Barcelos",
-    "Barcelos India",
+    "Barcelos South Africa",
     "flame-grilled chicken",
     "Portuguese chicken",
     "Peri-Peri chicken",
     "grilled chicken restaurant",
     "fast casual dining",
-    "QSR India",
-    "chicken restaurant India",
+    "QSR South Africa",
+    "chicken restaurant South Africa",
     "premium chicken",
   ],
-  authors: [{ name: "Barcelos India" }],
-  creator: "Barcelos India",
-  publisher: "Barcelos India",
+  authors: [{ name: "Barcelos South Africa" }],
+  creator: "Barcelos South Africa",
+  publisher: "Barcelos South Africa",
   formatDetection: {
     email: false,
     address: false,
@@ -47,26 +47,26 @@ export const metadata: Metadata = {
   },
   openGraph: {
     type: "website",
-    locale: "en_IN",
-    url: "https://barcelos.co.in",
-    siteName: "Barcelos India",
-    title: "Barcelos India | Flame-Grilled Chicken - Portuguese Heritage",
+    locale: "en_ZA",
+    url: "https://barcelos.co.za",
+    siteName: "Barcelos South Africa",
+    title: "Barcelos South Africa | Flame-Grilled Chicken - Portuguese Heritage",
     description:
-      "Experience authentic Portuguese flame-grilled chicken at Barcelos India. Premium quality, bold flavours, and the signature Peri-Peri taste.",
+      "Experience authentic Afro-Portuguese flame-grilled chicken at Barcelos South Africa. Premium quality, bold flavours, and the signature Peri-Peri taste.",
     images: [
       {
         url: "/images/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "Barcelos India - Flame-Grilled Chicken",
+        alt: "Barcelos South Africa - Flame-Grilled Chicken",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Barcelos India | Flame-Grilled Chicken",
+    title: "Barcelos South Africa | Flame-Grilled Chicken",
     description:
-      "Experience authentic Portuguese flame-grilled chicken at Barcelos India.",
+      "Experience authentic Afro-Portuguese flame-grilled chicken at Barcelos South Africa.",
     images: ["/images/og-image.jpg"],
   },
   robots: {

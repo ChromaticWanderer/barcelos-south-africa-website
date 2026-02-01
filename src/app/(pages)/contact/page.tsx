@@ -24,7 +24,7 @@ import { siteConfig } from "@/lib/constants/site"
 import { socialLinks } from "@/lib/constants/navigation"
 
 /**
- * Contact Page - Barcelos India
+ * Contact Page - Barcelos South Africa
  *
  * Comprehensive contact page with:
  * - Contact information cards
@@ -36,15 +36,15 @@ import { socialLinks } from "@/lib/constants/navigation"
 const faqs = [
   {
     question: "What are your restaurant hours?",
-    answer: "Most Barcelos locations are open from 11:00 AM to 11:00 PM daily. Check the specific location page for exact hours.",
+    answer: "Most Barcelos locations are open from 10:00 AM to 10:00 PM daily. Hours may vary by location.",
   },
   {
     question: "Do you offer delivery?",
-    answer: "Yes! You can order delivery through our online ordering platform or through popular delivery apps in your area.",
+    answer: "Yes! You can order delivery through ServeUp at orders.barcelos.co.za or through popular delivery apps in your area.",
   },
   {
     question: "How can I inquire about franchising?",
-    answer: "Visit our Franchise page for detailed information about partnership opportunities, or email us at barcelos.india@barcelos.com.",
+    answer: "Visit our Franchise page for detailed information about partnership opportunities, or email us at franchise@barcelos.co.za.",
   },
   {
     question: "Do you cater for events?",
@@ -86,7 +86,7 @@ export default function ContactPage() {
           subject: formData.subject,
           message: formData.message,
           submittedAt: new Date().toISOString(),
-          source: 'barcelos-india-website',
+          source: 'barcelos-south-africa-website',
           formType: 'contact',
         }),
       })
@@ -299,7 +299,7 @@ export default function ContactPage() {
                   FREQUENTLY ASKED QUESTIONS
                 </h2>
                 <p className="text-charcoal-medium mb-8">
-                  Quick answers to common questions about Barcelos India.
+                  Quick answers to common questions about Barcelos South Africa.
                 </p>
 
                 <div className="space-y-4 mb-12">

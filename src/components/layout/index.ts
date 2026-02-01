@@ -1,5 +1,5 @@
 /**
- * Layout Components - Barcelos India
+ * Layout Components - Barcelos South Africa
  *
  * Export all layout components for easy imports
  */

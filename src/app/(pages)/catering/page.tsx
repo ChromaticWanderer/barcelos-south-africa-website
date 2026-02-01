@@ -14,7 +14,7 @@ export const metadata: Metadata = {
 }
 
 /**
- * Catering Page - Barcelos India
+ * Catering Page - Barcelos South Africa
  *
  * Catering services page with:
  * - Service offerings

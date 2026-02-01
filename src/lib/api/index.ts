@@ -1,5 +1,5 @@
 /**
- * Barcelos India - API Layer
+ * Barcelos South Africa - API Layer
  *
  * Central export point for all API functions.
  * Import from '@/lib/api' for consistent access.

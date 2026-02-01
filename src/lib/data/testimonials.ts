@@ -1,5 +1,5 @@
 /**
- * Barcelos India - Testimonials Data
+ * Barcelos South Africa - Testimonials Data
  *
  * Centralized testimonials/reviews data for customer feedback display.
  * This serves as the single source of truth for testimonial information
@@ -29,7 +29,7 @@ export const TESTIMONIAL_SOURCE_INFO: Record<
   google: { name: "Google Reviews", icon: "google" },
   zomato: { name: "Zomato", icon: "zomato" },
   swiggy: { name: "Swiggy", icon: "swiggy" },
-  internal: { name: "Barcelos India", icon: "barcelos" },
+  internal: { name: "Barcelos South Africa", icon: "barcelos" },
 }
 
 /**
